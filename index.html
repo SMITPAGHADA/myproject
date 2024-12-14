@@ -1,0 +1,2519 @@
+<!DOCTYPE html>
+<html lang="en-US" class="" data-skin="light">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v23.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Cut Command in Linux with 6 Examples - Serverwala</title>
+	<meta name="description" content="The cut command in Linux provides a user-friendly syntax that allows for easy customization. Learn the numerous aspects of the cut command." />
+	<link rel="canonical" href="https://www.blog.serverwala.com/cut-command-in-linux/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Cut Command in Linux with 6 Examples - Serverwala" />
+	<meta property="og:description" content="The cut command in Linux provides a user-friendly syntax that allows for easy customization. Learn the numerous aspects of the cut command." />
+	<meta property="og:url" content="https://www.blog.serverwala.com/cut-command-in-linux/" />
+	<meta property="og:site_name" content="Serverwala Blog" />
+	<meta property="article:published_time" content="2024-05-30T10:22:40+00:00" />
+	<meta property="article:modified_time" content="2024-05-30T10:22:46+00:00" />
+	<meta property="og:image" content="https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png" />
+	<meta property="og:image:width" content="780" />
+	<meta property="og:image:height" content="470" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Arpit Saini" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Arpit Saini" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="9 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.blog.serverwala.com/cut-command-in-linux/","url":"https://www.blog.serverwala.com/cut-command-in-linux/","name":"Cut Command in Linux with 6 Examples - Serverwala","isPartOf":{"@id":"https://www.blog.serverwala.com/#website"},"primaryImageOfPage":{"@id":"https://www.blog.serverwala.com/cut-command-in-linux/#primaryimage"},"image":{"@id":"https://www.blog.serverwala.com/cut-command-in-linux/#primaryimage"},"thumbnailUrl":"https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png","datePublished":"2024-05-30T10:22:40+00:00","dateModified":"2024-05-30T10:22:46+00:00","author":{"@id":"https://www.blog.serverwala.com/#/schema/person/e5c804c19f0b159d20c5b67784d83224"},"description":"The cut command in Linux provides a user-friendly syntax that allows for easy customization. Learn the numerous aspects of the cut command.","breadcrumb":{"@id":"https://www.blog.serverwala.com/cut-command-in-linux/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.blog.serverwala.com/cut-command-in-linux/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.blog.serverwala.com/cut-command-in-linux/#primaryimage","url":"https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png","contentUrl":"https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png","width":780,"height":470,"caption":"Cut Command in Linux"},{"@type":"BreadcrumbList","@id":"https://www.blog.serverwala.com/cut-command-in-linux/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.blog.serverwala.com/"},{"@type":"ListItem","position":2,"name":"Cut Command in Linux with 6 Examples &#8211; Serverwala"}]},{"@type":"WebSite","@id":"https://www.blog.serverwala.com/#website","url":"https://www.blog.serverwala.com/","name":"Serverwala Blog","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.blog.serverwala.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.blog.serverwala.com/#/schema/person/e5c804c19f0b159d20c5b67784d83224","name":"Arpit Saini","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.blog.serverwala.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=96&d=mm&r=g","caption":"Arpit Saini"},"description":"He is the Director of Cloud Operations at Serverwala and also follows a passion to break complex tech topics into practical and easy-to-understand articles. He loves to write about Web Hosting, Software, Virtualization, Cloud Computing, and much more.","url":"https://www.blog.serverwala.com/author/arpit-saini/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Serverwala Blog &raquo; Feed" href="https://www.blog.serverwala.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Serverwala Blog &raquo; Comments Feed" href="https://www.blog.serverwala.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Serverwala Blog &raquo; Cut Command in Linux with 6 Examples &#8211; Serverwala Comments Feed" href="https://www.blog.serverwala.com/cut-command-in-linux/feed/" />
+
+		<style type="text/css">
+			:root{
+			
+					--main-nav-background: #1f2024;
+					--main-nav-secondry-background: rgba(0,0,0,0.2);
+					--main-nav-primary-color: #0088ff;
+					--main-nav-contrast-primary-color: #FFFFFF;
+					--main-nav-text-color: #FFFFFF;
+					--main-nav-secondry-text-color: rgba(225,255,255,0.5);
+					--main-nav-main-border-color: rgba(255,255,255,0.07);
+					--main-nav-secondry-border-color: rgba(255,255,255,0.04);
+				
+			}
+		</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />		<!-- This site uses the Google Analytics by MonsterInsights plugin v9.2.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No tracking code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.blog.serverwala.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.blog.serverwala.com/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='ctc-term-title-style-inline-css' type='text/css'>
+.ctc-block-controls-dropdown .components-base-control__field{margin:0 !important}
+
+</style>
+<style id='ctc-copy-button-style-inline-css' type='text/css'>
+.wp-block-ctc-copy-button{font-size:14px;line-height:normal;padding:8px 16px;border-width:1px;border-style:solid;border-color:inherit;border-radius:4px;cursor:pointer;display:inline-block}.ctc-copy-button-textarea{display:none !important}
+</style>
+<style id='ctc-copy-icon-style-inline-css' type='text/css'>
+.wp-block-ctc-copy-icon .ctc-block-copy-icon{background:rgba(0,0,0,0);padding:0;margin:0;position:relative;cursor:pointer}.wp-block-ctc-copy-icon .ctc-block-copy-icon .check-icon{display:none}.wp-block-ctc-copy-icon .ctc-block-copy-icon svg{height:1em;width:1em}.wp-block-ctc-copy-icon .ctc-block-copy-icon::after{position:absolute;content:attr(aria-label);padding:.5em .75em;right:100%;color:#fff;background:#24292f;font-size:11px;border-radius:6px;line-height:1;right:100%;bottom:50%;margin-right:6px;-webkit-transform:translateY(50%);transform:translateY(50%)}.wp-block-ctc-copy-icon .ctc-block-copy-icon::before{content:"";top:50%;bottom:50%;left:-7px;margin-top:-6px;border:6px solid rgba(0,0,0,0);border-left-color:#24292f;position:absolute}.wp-block-ctc-copy-icon .ctc-block-copy-icon::after,.wp-block-ctc-copy-icon .ctc-block-copy-icon::before{opacity:0;visibility:hidden;-webkit-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;transition:opacity .2s ease-in-out,visibility .2s ease-in-out}.wp-block-ctc-copy-icon .ctc-block-copy-icon.copied::after,.wp-block-ctc-copy-icon .ctc-block-copy-icon.copied::before{opacity:1;visibility:visible;-webkit-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;transition:opacity .2s ease-in-out,visibility .2s ease-in-out}.wp-block-ctc-copy-icon .ctc-block-copy-icon.copied .check-icon{display:inline-block}.wp-block-ctc-copy-icon .ctc-block-copy-icon.copied .copy-icon{display:none !important}.ctc-copy-icon-textarea{display:none !important}
+</style>
+<style id='ctc-social-share-style-inline-css' type='text/css'>
+.wp-block-ctc-social-share{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:8px}.wp-block-ctc-social-share svg{height:16px;width:16px}.wp-block-ctc-social-share a{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.wp-block-ctc-social-share a:focus{outline:none}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='copy-the-code-css' href='https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/assets/css/copy-the-code.css?ver=4.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ctc-copy-inline-css' href='https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/assets/css/copy-inline.css?ver=4.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.blog.serverwala.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-base-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/base.min.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-styles-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/style.min.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-widgets-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/widgets.min.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-helpers-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-fontawesome5-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-ilightbox-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-single-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/single.min.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-print-css' href='https://www.blog.serverwala.com/wp-content/themes/jannah/assets/css/print.css?ver=6.3.0' type='text/css' media='print' />
+<style id='tie-css-print-inline-css' type='text/css'>
+.wf-active .logo-text,.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6,.wf-active .the-subtitle{font-family: 'Poppins';}
+</style>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/classes/gutenberg/blocks/copy-button/js/frontend.js?ver=1.0.0" id="ctc-copy-button-script-2-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/classes/gutenberg/blocks/copy-icon/js/frontend.js?ver=1.0.0" id="ctc-copy-icon-script-2-js"></script>
+<link rel="https://api.w.org/" href="https://www.blog.serverwala.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.blog.serverwala.com/wp-json/wp/v2/posts/1544" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.blog.serverwala.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.1" />
+<link rel='shortlink' href='https://www.blog.serverwala.com/?p=1544' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.blog.serverwala.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blog.serverwala.com%2Fcut-command-in-linux%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.blog.serverwala.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blog.serverwala.com%2Fcut-command-in-linux%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.136.0" /><!-- Tracking Code -->
+    <script> (function(e, f, g, h, i){
+        $salespanel = window.$salespanel || (window.$salespanel = []);
+        __sp = i;
+        var a=f.createElement(g);
+        a.type="text/javascript";
+        a.async=1;
+        a.src=("https:" == f.location.protocol ? "https://" : "http://") + h;
+        var b = f.getElementsByTagName(g)[0];
+        b.parentNode.insertBefore(a,b);
+    })(window, document, "script", "salespanel.io/src/js/a13483dc-a6e5-4386-8eb7-e0e22d4c4568/sp.js", "a13483dc-a6e5-4386-8eb7-e0e22d4c4568");
+    </script> 
+<!-- Tracking Code -->
+
+<script>(function(w, d) { w.CollectId = "5ae9337573b7fa23f9c23307"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MTCK9SVF');</script>
+<!-- End Google Tag Manager --><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="https://www.blog.serverwala.com/wp-content/uploads/2023/10/favicon7.png" sizes="32x32" />
+<link rel="icon" href="https://www.blog.serverwala.com/wp-content/uploads/2023/10/favicon7.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.blog.serverwala.com/wp-content/uploads/2023/10/favicon7.png" />
+<meta name="msapplication-TileImage" content="https://www.blog.serverwala.com/wp-content/uploads/2023/10/favicon7.png" />
+		<style type="text/css" id="wp-custom-css">
+			* {
+    font-family: 'Poppins';
+}
+.container {
+    max-width: 1400px;
+}
+body{
+	background:#fff !important;
+	
+}
+.main-menu .menu-sub-content a {
+    font-size: 15px;
+}
+.main-menu .menu-sub-content a:hover {
+    background: #cccccc0f;
+}
+
+.wide-post-box .posts-items li {
+    width: 46%;
+    flex-direction: column;
+    margin-top: 15px !important;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.wide-post-box .posts-items li .post-thumb {
+    width: 100%;
+    margin-right: 0 !important;
+}
+
+.post-details .post-meta {
+    margin: 10px 0px;
+}
+.theme-header .top-menu li>a:hover::before {
+    border-top-color: #fff !important;
+}
+ .theme-header .logo-wrapper .image-logo {
+    margin: 25px 0px !important;
+}
+.topbar-wrapper .menu .menu-item a {
+    font-size: 16px;
+    color:#fff !important;
+    line-height: 50px;
+}
+.topbar-wrapper {
+    background: #00c0f7;
+  	min-height: 50px;  
+}
+.topbar-wrapper .tie-current-menu a {
+    background: #5e5e60;
+}
+nav.main-nav .menu>li.tie-current-menu>a, nav.main-nav .menu>li:hover>a{
+    background-color: #5e5e60;
+}
+.main-menu-wrapper .main-menu .menu>li>a {
+    font-size: 17px;
+}
+.topbar-wrapper .menu-item a:hover {
+    background: #5e5e60 !important;
+}
+.theme-header .top-menu li>a:before {
+    border-top-color: #000;
+}
+ .top-menu .menu .sub-menu {
+    background: #5e5e60db;
+}
+body #tie-container .theme-notice {
+    visibility: hidden;
+}
+
+#btn-back-to-top {
+    display: inline-flex;
+    background-color: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .3s,opacity .5s,visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 29px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#btn-back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+@media(min-width:992px){
+	.blog  .main-content 
+ #posts-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+}
+ @media(max-width:992px){
+.footer-block {
+flex-wrap: wrap;
+ 
+}
+	 	.blog  .main-content 
+ #posts-container {
+   
+    flex-direction: column;
+}
+	 .footer-last-line .col-xl-5{
+		 text-align:left !important;
+	 }	 
+	 .wide-post-box .posts-items li .post-thumb{
+		 max-width:100%;
+	 }	 
+.footer-block .footer-second-block {
+ 
+    margin-right: 52px !important;
+}	 
+.footer-first-block{
+		width:40% !important;
+}
+.footer-third-block{
+	width:40% !important;
+	margin-right: 0 !important;
+}
+.footer-second-block {
+width: 40% !important;
+margin-right: 0 !important;
+}
+
+.footer-last-line {
+flex-wrap: wrap;
+}
+
+.footer-last-line .col-xl-7 {
+width: 100% !important;
+}
+
+.footer-last-line .col-xl-5 {
+width: 100% !important;
+}
+
+.footer-last-line  .row {
+flex-wrap: wrap;
+}
+	.wide-post-box .posts-items li {
+    width: 100%;
+ 
+}	 
+}
+.uni_bg {
+    border-top: 2px solid #00c0f7;
+    padding: 40px 20px 20px 20px;
+    font-size: 17px;
+    color: #000000;
+    position: relative;
+    border-bottom: 2px solid #00c0f7;
+}
+.uni_bg:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '\f0eb';
+    font-family: 'font awesome 5 free';
+    margin-top: 12px;
+    margin-left: 16px;
+    display: block !important;
+    color: #00c0f7;
+    font-size: 22px;
+}
+.uni_bg:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: 'Tip';
+    margin-top: 11px;
+    margin-left: 38px;
+    display: block !important;
+    font-weight: bold;
+    color: #00c0f7;
+    font-size: 22px;
+}
+ .un_heading {
+    background: #fff;
+    border: 2px dotted #00c0f7;
+    padding: 9px 14px;
+} 
+.copy-the-code-outside .copy-the-code-button {
+    background: #000;
+    color: #fff;
+}
+.copy-the-code-outside .copy-the-code-button:hover {
+    background: #00c0f7;
+   
+}
+
+/*hide-chat-icon*/
+
+.home iframe#kiwi-big-iframe-wrapper  {
+    display: none !important;
+}
+.single-post iframe#kiwi-big-iframe-wrapper  {
+    display: none !important;
+}
+html #tie-body .widget-visible {
+    display: none !important;
+} 
+ 
+  .lwptoc_header {
+    position: relative;
+	margin-bottom:0;
+}
+ 
+.lwptoc_toggle_label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.lwptoc_toggle:before,.lwptoc_toggle:after {
+    display: none;
+}
+
+.lwptoc  .lwptoc_i {
+    width: 384px;
+}
+.lwptoc_i .lwptoc_header {
+    margin-bottom: 0;
+}
+
+ 		</style>
+		<style id="wpforms-css-vars-root">
+				:root {
+					--wpforms-field-border-radius: 3px;
+--wpforms-field-border-style: solid;
+--wpforms-field-border-size: 1px;
+--wpforms-field-background-color: #ffffff;
+--wpforms-field-border-color: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-border-color-spare: rgba( 0, 0, 0, 0.25 );
+--wpforms-field-text-color: rgba( 0, 0, 0, 0.7 );
+--wpforms-field-menu-color: #ffffff;
+--wpforms-label-color: rgba( 0, 0, 0, 0.85 );
+--wpforms-label-sublabel-color: rgba( 0, 0, 0, 0.55 );
+--wpforms-label-error-color: #d63637;
+--wpforms-button-border-radius: 3px;
+--wpforms-button-border-style: none;
+--wpforms-button-border-size: 1px;
+--wpforms-button-background-color: #066aab;
+--wpforms-button-border-color: #066aab;
+--wpforms-button-text-color: #ffffff;
+--wpforms-page-break-color: #066aab;
+--wpforms-background-image: none;
+--wpforms-background-position: center center;
+--wpforms-background-repeat: no-repeat;
+--wpforms-background-size: cover;
+--wpforms-background-width: 100px;
+--wpforms-background-height: 100px;
+--wpforms-background-color: rgba( 0, 0, 0, 0 );
+--wpforms-background-url: none;
+--wpforms-container-padding: 0px;
+--wpforms-container-border-style: none;
+--wpforms-container-border-width: 1px;
+--wpforms-container-border-color: #000000;
+--wpforms-container-border-radius: 3px;
+--wpforms-field-size-input-height: 43px;
+--wpforms-field-size-input-spacing: 15px;
+--wpforms-field-size-font-size: 16px;
+--wpforms-field-size-line-height: 19px;
+--wpforms-field-size-padding-h: 14px;
+--wpforms-field-size-checkbox-size: 16px;
+--wpforms-field-size-sublabel-spacing: 5px;
+--wpforms-field-size-icon-size: 1;
+--wpforms-label-size-font-size: 16px;
+--wpforms-label-size-line-height: 19px;
+--wpforms-label-size-sublabel-font-size: 14px;
+--wpforms-label-size-sublabel-line-height: 17px;
+--wpforms-button-size-font-size: 17px;
+--wpforms-button-size-height: 41px;
+--wpforms-button-size-padding-h: 15px;
+--wpforms-button-size-margin-top: 10px;
+--wpforms-container-shadow-size-box-shadow: none;
+
+				}
+			</style></head>
+
+<body data-rsssl=1 id="tie-body" class="post-template-default single single-post postid-1544 single-format-standard wrapper-has-shadow block-head-1 magazine1 is-thumb-overlay-disabled is-desktop is-header-layout-3 sidebar-right has-sidebar post-layout-1 narrow-title-narrow-media is-standard-format has-mobile-share hide_share_post_top hide_share_post_bottom">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTCK9SVF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="background-overlay">
+
+	<div id="tie-container" class="site tie-container">
+
+						<div class="theme-notice" style="z-index:9999999!important;position:fixed!important;width:100%!important;bottom:0!important;display:block!important;text-align:center;background:#f44336!important;color:#fff!important;"><a style="color: #fff; text-decoration: underline;" href="https://tielabs.com/buy/jannah?utm_source=footer-bar&utm_medium=link&utm_campaign=jannah">Jannah Theme</a> License is not validated, Go to the theme options page to validate the license, You need a single license for each domain name.</div>
+			
+		<div id="tie-wrapper">
+
+			
+<header id="theme-header" class="theme-header header-layout-3 main-nav-dark main-nav-default-dark main-nav-below main-nav-boxed no-stream-item top-nav-active top-nav-light top-nav-default-light top-nav-below top-nav-below-main-nav has-shadow has-normal-width-logo mobile-header-default">
+	
+<div class="container header-container">
+	<div class="tie-row logo-row">
+
+		
+		<div class="logo-wrapper">
+			<div class="tie-col-md-4 logo-container clearfix">
+				<div id="mobile-header-components-area_1" class="mobile-header-components"><ul class="components"><li class="mobile-component_menu custom-menu-link"><a href="#" id="mobile-menu-icon" class=""><span class="tie-mobile-menu-icon nav-icon is-layout-1"></span><span class="screen-reader-text">Menu</span></a></li></ul></div>
+		<div id="logo" class="image-logo" >
+
+			
+			<a title="Serverwala Blog" href="https://www.blog.serverwala.com/">
+				
+				<picture class="tie-logo-default tie-logo-picture">
+					
+					<source class="tie-logo-source-default tie-logo-source" srcset="https://serverwala.com/blog/wp-content/uploads/2023/10/serverwala-header-logo.png">
+					<img class="tie-logo-img-default tie-logo-img" src="https://serverwala.com/blog/wp-content/uploads/2023/10/serverwala-header-logo.png" alt="Serverwala Blog" width="320" height="56" style="max-height:56px !important; width: auto;" />
+				</picture>
+						</a>
+
+			
+		</div><!-- #logo /-->
+
+		<div id="mobile-header-components-area_2" class="mobile-header-components"><ul class="components"><li class="mobile-component_search custom-menu-link">
+				<a href="#" class="tie-search-trigger-mobile">
+					<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+					<span class="screen-reader-text">Search for</span>
+				</a>
+			</li></ul></div>			</div><!-- .tie-col /-->
+		</div><!-- .logo-wrapper /-->
+
+		
+	</div><!-- .tie-row /-->
+</div><!-- .container /-->
+
+<div class="main-nav-wrapper">
+	<nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent"  aria-label="Primary Navigation">
+		<div class="container">
+
+			<div class="main-menu-wrapper">
+
+				
+				<div id="menu-components-wrap">
+
+					
+
+
+					<div class="main-menu main-menu-wrap tie-alignleft">
+						<div id="main-nav-menu" class="main-menu header-menu"><ul id="menu-main-menu" class="menu"><li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134"><a href="#">Company</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143"><a href="https://serverwala.com/about-us">About Us</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144"><a href="https://serverwala.com/contact-us">Contact</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-210"><a href="https://serverwala.com/roadmap">Roadmap</a></li>
+	<li id="menu-item-211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-211"><a href="https://serverwala.com/leadership">Our LeaderShip</a></li>
+	<li id="menu-item-212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-212"><a href="https://serverwala.com/partner-network">Our Partner</a></li>
+	<li id="menu-item-213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-213"><a href="https://www.blog.serverwala.com">Blog</a></li>
+</ul>
+</li>
+<li id="menu-item-135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135"><a href="#">Dedicated</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-224"><a href="#">North America</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231"><a href="https://serverwala.com/dedicated-server-usa">USA</a></li>
+		<li id="menu-item-232" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-232"><a href="https://serverwala.com/dedicated-server-mexico">Mexico</a></li>
+		<li id="menu-item-233" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-233"><a href="https://serverwala.com/dedicated-server-canada">Canada</a></li>
+	</ul>
+</li>
+	<li id="menu-item-225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-225"><a href="#">Europe</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a href="https://serverwala.com/dedicated-server-germany">Germany</a></li>
+		<li id="menu-item-236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-236"><a href="https://serverwala.com/dedicated-server-netherlands">Netherlands</a></li>
+		<li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-237"><a href="https://serverwala.com/dedicated-server-romania">Romania</a></li>
+		<li id="menu-item-238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-238"><a href="https://serverwala.com/dedicated-server-uk">UK</a></li>
+		<li id="menu-item-239" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-239"><a href="https://serverwala.com/dedicated-server-switzerland">Switzerland</a></li>
+		<li id="menu-item-240" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-240"><a href="https://serverwala.com/dedicated-server-france">France</a></li>
+		<li id="menu-item-241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241"><a href="https://serverwala.com/dedicated-server-italy">Italy</a></li>
+		<li id="menu-item-242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242"><a href="https://serverwala.com/dedicated-server-ukraine">Ukraine</a></li>
+		<li id="menu-item-243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-243"><a href="https://serverwala.com/dedicated-server-lithuania">Lithuania</a></li>
+	</ul>
+</li>
+	<li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-226"><a href="#">South America</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-245" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-245"><a href="https://serverwala.com/dedicated-server-colombia">Colombia</a></li>
+		<li id="menu-item-246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246"><a href="https://serverwala.com/dedicated-server-argentina">Argentina</a></li>
+		<li id="menu-item-247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-247"><a href="https://serverwala.com/dedicated-server-panama">Panama</a></li>
+		<li id="menu-item-248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-248"><a href="https://serverwala.com/dedicated-server-brazil">Brazil</a></li>
+		<li id="menu-item-249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-249"><a href="https://serverwala.com/dedicated-server-peru">Peru</a></li>
+		<li id="menu-item-250" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-250"><a href="https://serverwala.com/dedicated-server-uruguay">Uruguay</a></li>
+		<li id="menu-item-251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-251"><a href="https://serverwala.com/dedicated-server-ecuador">Ecuador</a></li>
+	</ul>
+</li>
+	<li id="menu-item-227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-227"><a href="#">Asia</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"><a href="https://serverwala.com/dedicated-server-china">China</a></li>
+		<li id="menu-item-254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-254"><a href="https://serverwala.com/dedicated-server-malaysia">Malaysia</a></li>
+		<li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255"><a href="https://serverwala.com/dedicated-server-india">India</a></li>
+		<li id="menu-item-256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-256"><a href="https://serverwala.com/dedicated-server-uae">UAE</a></li>
+		<li id="menu-item-257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="https://serverwala.com/dedicated-server-turkey">Turkey</a></li>
+		<li id="menu-item-258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-258"><a href="https://serverwala.com/dedicated-server-russia">Russia</a></li>
+		<li id="menu-item-259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259"><a href="https://serverwala.com/dedicated-server-japan">Japan</a></li>
+		<li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a href="https://serverwala.com/dedicated-server-thailand">Thailand</a></li>
+		<li id="menu-item-261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-261"><a href="https://serverwala.com/dedicated-server-singapore">Singapore</a></li>
+		<li id="menu-item-262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-262"><a href="https://serverwala.com/dedicated-server-south-korea">South korea</a></li>
+	</ul>
+</li>
+	<li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-228"><a href="#">Africa</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-264"><a href="https://serverwala.com/dedicated-server-south-africa">South Africa</a></li>
+	</ul>
+</li>
+	<li id="menu-item-229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-229"><a href="#">Australia</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-265"><a href="https://serverwala.com/dedicated-server-australia">Australia</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-136"><a href="#">VPS</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-267"><a href="#">North America</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268"><a href="https://www.serverwala.com/usa-vps">USA</a></li>
+		<li id="menu-item-269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269"><a href="https://www.serverwala.com/vps-mexico">Mexico</a></li>
+		<li id="menu-item-270" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-270"><a href="https://www.serverwala.com/vps-canada">Canada</a></li>
+	</ul>
+</li>
+	<li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272"><a href="#">Europe</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-273"><a href="https://www.serverwala.com/netherlands-vps">Netherlands</a></li>
+		<li id="menu-item-277" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-277"><a href="https://www.serverwala.com/vps-germany">Germany</a></li>
+		<li id="menu-item-278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-278"><a href="https://www.serverwala.com/vps-belgium">Belgium</a></li>
+		<li id="menu-item-279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-279"><a href="https://www.serverwala.com/romania-vps">Romania</a></li>
+		<li id="menu-item-280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-280"><a href="https://www.serverwala.com/vps-ireland">Ireland</a></li>
+		<li id="menu-item-281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-281"><a href="https://www.serverwala.com/vps-hosting-denmark">Denmark</a></li>
+		<li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-283"><a href="https://www.serverwala.com/vps-uk">UK</a></li>
+		<li id="menu-item-284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a href="https://www.serverwala.com/vps-ukraine">Ukraine</a></li>
+		<li id="menu-item-285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285"><a href="https://www.serverwala.com/vps-switzerland">Switzerland</a></li>
+		<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"><a href="https://www.serverwala.com/vps-france">France</a></li>
+		<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a href="https://www.serverwala.com/vps-norway">Norway</a></li>
+		<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-288"><a href="https://www.serverwala.com/vps-spain">Spain</a></li>
+		<li id="menu-item-290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290"><a href="https://www.serverwala.com/vps-italy">Italy</a></li>
+		<li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="https://www.serverwala.com/vps-poland">Poland</a></li>
+		<li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292"><a href="https://www.serverwala.com/vps-cyprus">Cyprus</a></li>
+		<li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-293"><a href="https://www.serverwala.com/vps-austria">Austria</a></li>
+		<li id="menu-item-294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-294"><a href="https://www.serverwala.com/vps-bulgaria">Bulgaria</a></li>
+		<li id="menu-item-295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-295"><a href="https://www.serverwala.com/vps-hungary">Hungary</a></li>
+		<li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-296"><a href="https://www.serverwala.com/vps-sweden">Sweden</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-137"><a href="#">Co-Location</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-298"><a href="#">USA</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299"><a href="https://www.serverwala.com/colocation-dallas">Dallas</a></li>
+		<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300"><a href="https://www.serverwala.com/colocation-los-angeles">Los Angeles</a></li>
+		<li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-301"><a href="https://www.serverwala.com/colocation-usa">Pasadena</a></li>
+		<li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-302"><a href="https://www.serverwala.com/colocation-seattle">Denver</a></li>
+	</ul>
+</li>
+	<li id="menu-item-303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-303"><a href="#">India</a>
+	<ul class="sub-menu menu-sub-content">
+		<li id="menu-item-305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-305"><a href="https://www.serverwala.com/colocation-mumbai">Mumbai</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-209"><a href="#">Additional Services</a>
+<ul class="sub-menu menu-sub-content">
+	<li id="menu-item-215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-215"><a href="https://www.serverwala.com/gpu-dedicated-server">GPU Dedicated Server</a></li>
+	<li id="menu-item-216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-216"><a href="https://www.serverwala.com/10gbps-dedicated-server">10 Gbps Dedicated Server</a></li>
+	<li id="menu-item-217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-217"><a href="https://www.serverwala.com/cluster-server">Cluster Service</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-222"><a href="https://www.serverwala.com/backup.html">Backup</a></li>
+</ul>
+</li>
+<li id="menu-item-1388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1388"><a href="https://www.blog.serverwala.com/data-protection/">Data Protection</a></li>
+</ul></div>					</div><!-- .main-menu.tie-alignleft /-->
+
+					<ul class="components">			<li class="search-bar menu-item custom-menu-link" aria-label="Search">
+				<form method="get" id="search" action="https://www.blog.serverwala.com/">
+					<input id="search-input" class="is-ajax-search"  inputmode="search" type="text" name="s" title="Search for" placeholder="Search for" />
+					<button id="search-submit" type="submit">
+						<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+						<span class="screen-reader-text">Search for</span>
+					</button>
+				</form>
+			</li>
+			</ul><!-- Components -->
+				</div><!-- #menu-components-wrap /-->
+			</div><!-- .main-menu-wrapper /-->
+		</div><!-- .container /-->
+
+			</nav><!-- #main-nav /-->
+</div><!-- .main-nav-wrapper /-->
+
+
+<nav id="top-nav"  class="has-menu top-nav header-nav" aria-label="Secondary Navigation">
+	<div class="container">
+		<div class="topbar-wrapper">
+
+			
+			<div class="tie-alignleft">
+				<div class="top-menu header-menu"><ul id="menu-secondary-menu" class="menu"><li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139"><a href="https://www.blog.serverwala.com/category/data-centers">Data Centers</a></li>
+<li id="menu-item-1395" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1395"><a href="https://www.blog.serverwala.com/category/data-protection">Data Protection</a></li>
+<li id="menu-item-1397" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1397"><a>Hosting</a>
+<ul class="sub-menu">
+	<li id="menu-item-1399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1399"><a href="https://www.blog.serverwala.com/category/dedicated-server">Dedicated Servers</a></li>
+	<li id="menu-item-1401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1401"><a href="https://www.blog.serverwala.com/category/vps-server">VPS Servers</a></li>
+	<li id="menu-item-1402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1402"><a href="https://www.blog.serverwala.com/category/web-hosting">Web Hosting</a></li>
+</ul>
+</li>
+<li id="menu-item-1403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1403"><a href="https://www.blog.serverwala.com/category/devops">DevOps</a></li>
+<li id="menu-item-1404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1404"><a>OS</a>
+<ul class="sub-menu">
+	<li id="menu-item-1405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1405"><a href="https://www.blog.serverwala.com/category/linux">Linux</a></li>
+	<li id="menu-item-1406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1406"><a href="https://www.blog.serverwala.com/category/windows">Windows</a></li>
+</ul>
+</li>
+<li id="menu-item-1407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1407"><a href="https://www.blog.serverwala.com/category/technology">Technology</a></li>
+</ul></div>			</div><!-- .tie-alignleft /-->
+
+			<div class="tie-alignright">
+							</div><!-- .tie-alignright /-->
+
+		</div><!-- .topbar-wrapper /-->
+	</div><!-- .container /-->
+</nav><!-- #top-nav /-->
+</header>
+
+<div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
+
+<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+
+	
+	<article id="the-post" class="container-wrapper post-content tie-standard">
+
+		
+<header class="entry-header-outer">
+
+	
+	<div class="entry-header">
+
+		<span class="post-cat-wrap"><a class="post-cat tie-cat-24" href="https://www.blog.serverwala.com/category/linux/">Linux</a></span>
+		<h1 class="post-title entry-title">
+			Cut Command in Linux with 6 Examples &#8211; Serverwala		</h1>
+
+		<div class="single-post-meta post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-2">
+						<span class="meta-author-avatar">
+							<a href="https://www.blog.serverwala.com/author/arpit-saini/"><img alt='Photo of Arpit Saini' src='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=140&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=280&#038;d=mm&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' decoding='async'/></a>
+						</span>
+					<span class="meta-author"><a href="https://www.blog.serverwala.com/author/arpit-saini/" class="author-name tie-icon" title="Arpit Saini">Arpit Saini</a></span></span></span><span class="date meta-item tie-icon">30/05/2024</span><div class="tie-alignright"><span class="meta-views meta-item hot"><span class="tie-icon-fire" aria-hidden="true"></span> 2,024 </span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 6 minutes read</span> </div></div><!-- .post-meta -->	</div><!-- .entry-header /-->
+
+	
+	
+</header><!-- .entry-header-outer /-->
+
+
+		<div id="share-buttons-top" class="share-buttons share-buttons-top">
+			<div class="share-links  icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">Twitter</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/&#038;title=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="mailto:?subject=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;body=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Share via Email</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		<div  class="featured-area"><div class="featured-area-inner"><figure class="single-featured-image"><img width="780" height="470" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png" class="attachment-jannah-image-post size-jannah-image-post wp-post-image" alt="Cut Command in Linux" data-main-img="1" decoding="async" fetchpriority="high" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala.png 780w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala-300x181.png 300w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/Cut-Command-in-Linux-with-6-Examples-Serverwala-768x463.png 768w" sizes="(max-width: 780px) 100vw, 780px" /></figure></div></div>
+		<div class="entry-content entry clearfix">
+
+			
+			
+<div class="lwptoc lwptoc-autoWidth lwptoc-baseItems lwptoc-light lwptoc-notInherit" data-smooth-scroll="1" data-smooth-scroll-offset="24"><div class="lwptoc_i">    <div class="lwptoc_header">
+        <b class="lwptoc_title">Contents</b>                    <span class="lwptoc_toggle">
+                <a href="#" class="lwptoc_toggle_label" data-label="hide">show</a>            </span>
+            </div>
+<div class="lwptoc_items" style="display:none;">
+    <div class="lwptoc_itemWrap"><div class="lwptoc_item">    <a href="#Introduction">
+                    <span class="lwptoc_item_number">1</span>
+                <span class="lwptoc_item_label">Introduction</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Cut_Command_Syntax">
+                    <span class="lwptoc_item_number">2</span>
+                <span class="lwptoc_item_label">Cut Command Syntax</span>
+    </a>
+    <div class="lwptoc_itemWrap"><div class="lwptoc_item">    <a href="#cut_Command_Options">
+                    <span class="lwptoc_item_number">2.1</span>
+                <span class="lwptoc_item_label">cut Command Options</span>
+    </a>
+    <div class="lwptoc_itemWrap"><div class="lwptoc_item">    <a href="#b_Cut_Based_on_Bytes">
+                    <span class="lwptoc_item_number">2.1.1</span>
+                <span class="lwptoc_item_label">-b: Cut Based on Bytes</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-b_1-5_filenametxt">
+                    <span class="lwptoc_item_number">2.1.2</span>
+                <span class="lwptoc_item_label">cut -b 1-5 filename.txt</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#c_Cut_Based_on_Characters">
+                    <span class="lwptoc_item_number">2.1.3</span>
+                <span class="lwptoc_item_label">-c: Cut Based on Characters</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-c_2-6_filenametxt">
+                    <span class="lwptoc_item_number">2.1.4</span>
+                <span class="lwptoc_item_label">cut -c 2-6 filename.txt</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#d_Specify_a_Delimiter_to_Cut_Based_on_Fields">
+                    <span class="lwptoc_item_number">2.1.5</span>
+                <span class="lwptoc_item_label">-d: Specify a Delimiter to Cut Based on Fields</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-d_-f_2_filenamecsv">
+                    <span class="lwptoc_item_number">2.1.6</span>
+                <span class="lwptoc_item_label">cut -d ‘,’ -f 2 filename.csv</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#f_Cut_Based_on_Fields">
+                    <span class="lwptoc_item_number">2.1.7</span>
+                <span class="lwptoc_item_label">-f: Cut Based on Fields</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-f_13_filenametsv">
+                    <span class="lwptoc_item_number">2.1.8</span>
+                <span class="lwptoc_item_label">cut -f 1,3 filename.tsv</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#complement_Complement_the_Selection">
+                    <span class="lwptoc_item_number">2.1.9</span>
+                <span class="lwptoc_item_label">–complement: Complement the Selection</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-c_2-6_complement_filenametxt">
+                    <span class="lwptoc_item_number">2.1.10</span>
+                <span class="lwptoc_item_label">cut -c 2-6 –complement filename.txt</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#o_Specify_an_Output_Delimiter">
+                    <span class="lwptoc_item_number">2.1.11</span>
+                <span class="lwptoc_item_label">-o: Specify an Output Delimiter</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#cut_-d_-f_13_-o_filenamecsv">
+                    <span class="lwptoc_item_number">2.1.12</span>
+                <span class="lwptoc_item_label">cut -d ‘,’ -f 1,3 -o ‘|’ filename.csv</span>
+    </a>
+    </div></div></div></div></div><div class="lwptoc_item">    <a href="#Linux_cut_Examples">
+                    <span class="lwptoc_item_number">3</span>
+                <span class="lwptoc_item_label">Linux cut Examples</span>
+    </a>
+    <div class="lwptoc_itemWrap"><div class="lwptoc_item">    <a href="#Cut_by_Bytes">
+                    <span class="lwptoc_item_number">3.1</span>
+                <span class="lwptoc_item_label">Cut by Bytes</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Cut_by_Characters">
+                    <span class="lwptoc_item_number">3.2</span>
+                <span class="lwptoc_item_label">Cut by Characters</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Cut_Based_on_a_Delimiter">
+                    <span class="lwptoc_item_number">3.3</span>
+                <span class="lwptoc_item_label">Cut Based on a Delimiter</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Cut_by_Fields">
+                    <span class="lwptoc_item_number">3.4</span>
+                <span class="lwptoc_item_label">Cut by Fields</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Complement_a_Selection">
+                    <span class="lwptoc_item_number">3.5</span>
+                <span class="lwptoc_item_label">Complement a Selection</span>
+    </a>
+    </div><div class="lwptoc_item">    <a href="#Specify_an_Output_Delimiter">
+                    <span class="lwptoc_item_number">3.6</span>
+                <span class="lwptoc_item_label">Specify an Output Delimiter</span>
+    </a>
+    </div></div></div><div class="lwptoc_item">    <a href="#Final_Words">
+                    <span class="lwptoc_item_number">4</span>
+                <span class="lwptoc_item_label">Final Words</span>
+    </a>
+    </div></div></div>
+</div></div><h2 class="wp-block-heading"><span id="Introduction">Introduction</span></h2>
+
+
+
+<p>Linux cut command is a powerful utility that allows users to manipulate and extract particular elements of text from files or streams. It is an essential tool for data processing and analysis in the Linux environment. In this blog post, we will obtain insights into the numerous aspects of the cut command, providing you with practical examples to enhance your understanding.</p>
+
+
+
+<h2 class="wp-block-heading"><span id="Cut_Command_Syntax">Cut Command Syntax</span></h2>
+
+
+
+<p>The cut command in Linux provides a user-friendly syntax that allows for easy customization. By adhering to the following structure, users can harness its power efficiently:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut OPTION... [FILE]...</em></code></pre>
+
+
+
+<p>The term OPTION encapsulates the diverse flags and parameters at your disposal, offering flexibility in tailoring the behavior of the cut command. Whether you are working with a single file or multiple input files, this syntax remains consistent, streamlining the text extraction process.</p>
+
+
+
+<p>Understanding and utilizing these options is pivotal to unlocking the full potential of the cut command. As we explore various examples later in this blog, keep in mind how these options serve as the building blocks for crafting precise and tailored commands. This simplicity in syntax ensures that even users new to the Linux cut command can quickly grasp its functionality and integrate it seamlessly into their data processing workflows.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="cut_Command_Options">cut Command Options</span></h3>
+
+
+
+<p>The cut command in Linux comes equipped with a rich set of options, each designed to cater to specific text extraction requirements. Let’s explore these options in detail:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="b_Cut_Based_on_Bytes"><strong>-b: Cut Based on Bytes</strong></span></h4>
+
+
+
+<p>The -b option enables users to cut text based on bytes. This is particularly useful when dealing with binary files or scenarios where byte-level precision is crucial. For example:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-b_1-5_filenametxt"><strong>cut -b 1-5 filename.txt</strong></span></h4>
+
+
+
+<p>This command extracts the first five bytes from the specified file, providing a concise way to isolate specific portions of binary data.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="419" height="148" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-117.png" alt="cut -b 1-5 filename.txt" class="wp-image-1551" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-117.png 419w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-117-300x106.png 300w" sizes="(max-width: 419px) 100vw, 419px"></figure>
+
+
+
+<h4 class="wp-block-heading"><span id="c_Cut_Based_on_Characters"><strong>-c: Cut Based on Characters</strong></span></h4>
+
+
+
+<p>Similar to cutting by bytes, the -c option allows users to cut text based on characters. It is particularly handy for working with textual data where character positions matter. For instance:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-c_2-6_filenametxt"><strong>cut -c 2-6 filename.txt</strong></span></h4>
+
+
+
+<p>This extracts characters 2 to 6 from the specified file, demonstrating the versatility of the cut command in handling character-level operations.</p>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="350" height="139" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-118.png" alt="cut -c 2-6 filename.txt" class="wp-image-1552" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-118.png 350w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-118-300x119.png 300w" sizes="auto, (max-width: 350px) 100vw, 350px"></figure>
+
+
+
+<h4 class="wp-block-heading"><span id="d_Specify_a_Delimiter_to_Cut_Based_on_Fields"><strong>-d: Specify a Delimiter to Cut Based on Fields</strong></span></h4>
+
+
+
+<p>The -d option empowers users to specify a delimiter when cutting based on fields. This is invaluable when dealing with structured data like CSV or TSV files. For example:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-d_-f_2_filenamecsv"><strong>cut -d ‘,’ -f 2 filename.csv</strong></span></h4>
+
+
+
+<p>In this command, the comma serves as the delimiter, and the cut command extracts the second field from the CSV file. This capability enhances the tool’s adaptability to various data formats.</p>
+
+
+
+<h4 class="wp-block-heading"><span id="f_Cut_Based_on_Fields"><strong>-f: Cut Based on Fields</strong></span></h4>
+
+
+
+<p>The -f option is specifically designed for cutting based on fields. It complements the -d option, allowing users to operate seamlessly with structured data. Consider the following example:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-f_13_filenametsv"><strong>cut -f 1,3 filename.tsv</strong></span></h4>
+
+
+
+<p>This extracts the first and third fields from a tab-separated values (TSV) file, showcasing the cut command’s prowess in handling structured data extraction.</p>
+
+
+
+<h4 class="wp-block-heading"><span id="complement_Complement_the_Selection"><strong>–complement: Complement the Selection</strong></span></h4>
+
+
+
+<p>The –complement option provides an intriguing twist by allowing users to complement their selection. When combined with other options, it selects everything except the specified portion. For instance:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-c_2-6_complement_filenametxt"><strong>cut -c 2-6 –complement filename.txt</strong></span></h4>
+
+
+
+<p>This extracts everything from the file except characters 2 to 6, demonstrating the flexibility of the cut command in data manipulation.</p>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="578" height="168" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-123.png" alt="cut -c 2-6 --complement filename.txt" class="wp-image-1557" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-123.png 578w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-123-300x87.png 300w" sizes="auto, (max-width: 578px) 100vw, 578px"></figure>
+
+
+
+<h4 class="wp-block-heading"><span id="o_Specify_an_Output_Delimiter"><strong>-o: Specify an Output Delimiter</strong></span></h4>
+
+
+
+<p>The -o option provides users with the ability to specify an output delimiter, offering control over the format of the extracted data. Consider the following example:</p>
+
+
+
+<h4 class="wp-block-heading"><span id="cut_-d_-f_13_-o_filenamecsv"><strong>cut -d ‘,’ -f 1,3 -o ‘|’ filename.csv</strong></span></h4>
+
+
+
+<p>Here, the output delimiter is set to a pipe (“|”), enhancing the readability and compatibility of the extracted data.</p>
+
+
+
+<h2 class="wp-block-heading"><span id="Linux_cut_Examples">Linux cut Examples</span></h2>
+
+
+
+<h3 class="wp-block-heading"><span id="Cut_by_Bytes">Cut by Bytes</span></h3>
+
+
+
+<p>The Linux cut command stands as a versatile utility, and the -b option exemplifies its precision in handling binary data. In this detailed example:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -b 1-5 filename.txt</em></code></pre>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="404" height="97" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-120.png" alt="Cut by Bytes" class="wp-image-1554" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-120.png 404w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-120-300x72.png 300w" sizes="auto, (max-width: 404px) 100vw, 404px"></figure>
+
+
+
+<p>This command adeptly extracts the first five bytes from the specified file. The Linux cut command’s proficiency in byte-level manipulation is invaluable for tasks demanding a nuanced understanding of binary structures. Whether analyzing file headers or extracting specific sections from binary logs, the cut command proves indispensable in various Linux command-line scenarios.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="Cut_by_Characters">Cut by Characters</span></h3>
+
+
+
+<p>The Linux cut command extends its capabilities with the -c option, enabling users to cut text based on characters. In this illustrative example:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -c 2-6 filename.txt</em></code></pre>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="385" height="141" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-116.png" alt="Cut by Characters" class="wp-image-1550" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-116.png 385w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-116-300x110.png 300w" sizes="auto, (max-width: 385px) 100vw, 385px"></figure>
+
+
+
+<p>Here, the cut command precisely extracts characters 2 to 6 from the specified file. This feature is vital for handling textual data where character positions carry significance. The Linux cut command provides users with the flexibility to navigate and extract information at the character level, making it an essential tool for text processing tasks in the Linux environment.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="Cut_Based_on_a_Delimiter">Cut Based on a Delimiter</span></h3>
+
+
+
+<p>Structured data, often found in CSV files, is efficiently managed with the Linux cut command and its -d option. Delving deeper into the example:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -d ',' -f 2 filename.csv</em></code></pre>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="570" height="232" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-122.png" alt="Cut Based on a Delimiter" class="wp-image-1556" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-122.png 570w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-122-300x122.png 300w" sizes="auto, (max-width: 570px) 100vw, 570px"></figure>
+
+
+
+<p>This command extracts the second field from the CSV file, leveraging the comma as the delimiter. The Linux cut command showcases its adaptability to diverse data formats, making it a go-to solution for efficiently working with delimited data, whether it be commas, tabs, or other separators.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="Cut_by_Fields">Cut by Fields</span></h3>
+
+
+
+<p>The Linux cut command emerges as a data manipulation powerhouse with its -f option, tailored for cutting based on fields. Delving into this robust functionality:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -f 1,3 filename.tsv</em></code></pre>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="399" height="197" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-119.png" alt="Cut by Fields" class="wp-image-1553" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-119.png 399w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-119-300x148.png 300w" sizes="auto, (max-width: 399px) 100vw, 399px"></figure>
+
+
+
+<p>This command exemplifies the Linux cut command’s prowess in efficiently extracting specific fields from a TSV (Tab-Separated Values) file. The ability to selectively extract fields becomes crucial in scenarios involving structured data analysis, such as parsing log files or analyzing database exports. The cut command streamlines these tasks by allowing users to pinpoint and extract the necessary information with precision.</p>
+
+
+
+<p>Consider a practical application in the realm of log analysis, where timestamp and user activity are recorded in distinct fields. The -f option empowers users to selectively extract these fields, enabling focused analysis without unnecessary data clutter. This exemplifies the adaptability of the Linux cut command in diverse contexts, making it an invaluable asset for users dealing with structured datasets.</p>
+
+
+
+<p>Moreover, in the context of database exports, where data is organized into fields, the cut command’s -f option becomes instrumental. Users can effortlessly extract specific columns, facilitating seamless integration with downstream processing tools or databases. This flexibility positions the cut command as a go-to solution for extracting targeted information from structured data sources.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="Complement_a_Selection">Complement a Selection</span></h3>
+
+
+
+<p>The Linux cut command offers a distinctive feature with the –complement option, providing users with a powerful twist in selections. Expanding on this advanced functionality:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -c 2-6 --complement filename.txt</em></code></pre>
+
+
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="574" height="175" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-121.png" alt="Complement a Selection" class="wp-image-1555" srcset="https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-121.png 574w, https://www.blog.serverwala.com/wp-content/uploads/2024/05/image-121-300x91.png 300w" sizes="auto, (max-width: 574px) 100vw, 574px"></figure>
+
+
+
+<p>In this example, the command takes a unique approach by extracting everything from the file except characters 2 to 6. This showcases the unparalleled flexibility of the Linux cut command in data manipulation. The –complement option becomes a strategic tool, adding a layer of refinement to user selections. This feature proves invaluable in scenarios where precise exclusion is required, allowing users to tailor their selections with a level of granularity that enhances the cut command’s versatility.</p>
+
+
+
+<p>Consider a practical application where log files contain timestamps, and users wish to exclude a specific timeframe. The –complement option proves instrumental in effortlessly removing the unwanted portion, streamlining data analysis. This adaptability is crucial for users navigating diverse text processing scenarios, showcasing the cut command’s efficacy in meeting nuanced selection requirements.</p>
+
+
+
+<h3 class="wp-block-heading"><span id="Specify_an_Output_Delimiter">Specify an Output Delimiter</span></h3>
+
+
+
+<p>The Linux cut command distinguishes itself with the -o option, providing users the ability to tailor the output format with a specified delimiter. Delving into the enhanced functionality:</p>
+
+
+
+<pre class="wp-block-code"><code><em>cut -d ',' -f 1,3 -o '|' filename.csv</em></code></pre>
+
+
+
+<p>In this example, the output delimiter is set to a pipe (“|”), a strategic choice that underscores the Linux cut command’s adaptability to diverse user preferences. The cut command’s flexibility in accommodating various delimiters not only enhances readability but also ensures compatibility with downstream processing tools or scripts.</p>
+
+
+
+<p>This feature becomes particularly vital in situations where data integration involves multiple systems, each expecting a specific format. The Linux cut command bridges these format gaps seamlessly, illustrating its role as a facilitator in the broader context of data interoperability. Whether preparing data for database imports, log parsing, or custom scripts, the cut command proves instrumental in aligning extracted information with the desired output format.</p>
+
+
+
+<p>Moreover, the -o option contributes to the Linux cut command’s versatility in supporting different data presentation styles. This adaptability is significant in dynamic environments where output necessities may evolve. By allowing users to define their preferred delimiters, the cut command ensures that extracted data aligns with evolving standards, enhancing its relevance in the ever-changing landscape of data processing and analysis.</p>
+
+
+
+<p class="uni_bg">Also Read: <a href="https://www.blog.serverwala.com/how-to-master-the-linux-curl-command/">How to Master the Linux Curl Command</a></p>
+
+
+
+<h2 class="wp-block-heading"><span id="Final_Words">Final Words</span></h2>
+
+
+
+<p>The Linux cut command stands as a robust as well as versatile tool for text manipulation and extraction. Its array of options empowers users to tailor their commands to diverse data scenarios, making it an indispensable asset in the Linux command-line toolkit. By mastering the cut command, you enhance your ability to efficiently process and analyze data, streamlining your workflow in server management and beyond. Stay tuned for more insightful Serverwala blogs on Linux commands and server optimization</p>
+
+			<div class="post-bottom-meta post-bottom-tags post-tags-modern"><div class="post-bottom-meta-title"><span class="tie-icon-tags" aria-hidden="true"></span> Tags</div><span class="tagcloud"><a href="https://www.blog.serverwala.com/tag/cut-command-in-linux/" rel="tag">Cut Command in Linux</a> <a href="https://www.blog.serverwala.com/tag/cut-command-syntax/" rel="tag">Cut Command Syntax</a></span></div>
+		</div><!-- .entry-content /-->
+
+				<div id="post-extra-info">
+			<div class="theiaStickySidebar">
+				<div class="single-post-meta post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-2">
+						<span class="meta-author-avatar">
+							<a href="https://www.blog.serverwala.com/author/arpit-saini/"><img alt='Photo of Arpit Saini' src='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=140&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=280&#038;d=mm&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/></a>
+						</span>
+					<span class="meta-author"><a href="https://www.blog.serverwala.com/author/arpit-saini/" class="author-name tie-icon" title="Arpit Saini">Arpit Saini</a></span></span></span><span class="date meta-item tie-icon">30/05/2024</span><div class="tie-alignright"><span class="meta-views meta-item hot"><span class="tie-icon-fire" aria-hidden="true"></span> 2,024 </span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 6 minutes read</span> </div></div><!-- .post-meta -->
+		<div id="share-buttons-top" class="share-buttons share-buttons-top">
+			<div class="share-links  icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">Twitter</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/&#038;title=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="mailto:?subject=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;body=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Share via Email</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+					</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<script id="tie-schema-json" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2024-05-30T15:52:40+05:30","datePublished":"2024-05-30T15:52:40+05:30","dateModified":"2024-05-30T15:52:46+05:30","headline":"Cut Command in Linux with 6 Examples &#8211; Serverwala","name":"Cut Command in Linux with 6 Examples &#8211; Serverwala","keywords":"Cut Command in Linux,Cut Command Syntax","url":"https:\/\/www.blog.serverwala.com\/cut-command-in-linux\/","description":"Introduction Linux cut command is a powerful utility that allows users to manipulate and extract particular elements of text from files or streams. It is an essential tool for data processing and anal","copyrightYear":"2024","articleSection":"Linux","articleBody":"\nIntroduction\n\n\n\nLinux cut command is a powerful utility that allows users to manipulate and extract particular elements of text from files or streams. It is an essential tool for data processing and analysis in the Linux environment. In this blog post, we will obtain insights into the numerous aspects of the cut command, providing you with practical examples to enhance your understanding.\n\n\n\nCut Command Syntax\n\n\n\nThe cut command in Linux provides a user-friendly syntax that allows for easy customization. By adhering to the following structure, users can harness its power efficiently:\n\n\n\ncut OPTION... &#91;FILE]...\n\n\n\nThe term OPTION encapsulates the diverse flags and parameters at your disposal, offering flexibility in tailoring the behavior of the cut command. Whether you are working with a single file or multiple input files, this syntax remains consistent, streamlining the text extraction process.\n\n\n\nUnderstanding and utilizing these options is pivotal to unlocking the full potential of the cut command. As we explore various examples later in this blog, keep in mind how these options serve as the building blocks for crafting precise and tailored commands. This simplicity in syntax ensures that even users new to the Linux cut command can quickly grasp its functionality and integrate it seamlessly into their data processing workflows.\n\n\n\ncut Command Options\n\n\n\nThe cut command in Linux comes equipped with a rich set of options, each designed to cater to specific text extraction requirements. Let's explore these options in detail:\n\n\n\n-b: Cut Based on Bytes\n\n\n\nThe -b option enables users to cut text based on bytes. This is particularly useful when dealing with binary files or scenarios where byte-level precision is crucial. For example:\n\n\n\ncut -b 1-5 filename.txt\n\n\n\nThis command extracts the first five bytes from the specified file, providing a concise way to isolate specific portions of binary data.\n\n\n\n\n\n\n\n-c: Cut Based on Characters\n\n\n\nSimilar to cutting by bytes, the -c option allows users to cut text based on characters. It is particularly handy for working with textual data where character positions matter. For instance:\n\n\n\ncut -c 2-6 filename.txt\n\n\n\nThis extracts characters 2 to 6 from the specified file, demonstrating the versatility of the cut command in handling character-level operations.\n\n\n\n\n\n\n\n-d: Specify a Delimiter to Cut Based on Fields\n\n\n\nThe -d option empowers users to specify a delimiter when cutting based on fields. This is invaluable when dealing with structured data like CSV or TSV files. For example:\n\n\n\ncut -d ',' -f 2 filename.csv\n\n\n\nIn this command, the comma serves as the delimiter, and the cut command extracts the second field from the CSV file. This capability enhances the tool's adaptability to various data formats.\n\n\n\n-f: Cut Based on Fields\n\n\n\nThe -f option is specifically designed for cutting based on fields. It complements the -d option, allowing users to operate seamlessly with structured data. Consider the following example:\n\n\n\ncut -f 1,3 filename.tsv\n\n\n\nThis extracts the first and third fields from a tab-separated values (TSV) file, showcasing the cut command's prowess in handling structured data extraction.\n\n\n\n--complement: Complement the Selection\n\n\n\nThe --complement option provides an intriguing twist by allowing users to complement their selection. When combined with other options, it selects everything except the specified portion. For instance:\n\n\n\ncut -c 2-6 --complement filename.txt\n\n\n\nThis extracts everything from the file except characters 2 to 6, demonstrating the flexibility of the cut command in data manipulation.\n\n\n\n\n\n\n\n-o: Specify an Output Delimiter\n\n\n\nThe -o option provides users with the ability to specify an output delimiter, offering control over the format of the extracted data. Consider the following example:\n\n\n\ncut -d ',' -f 1,3 -o '|' filename.csv\n\n\n\nHere, the output delimiter is set to a pipe (\"|\"), enhancing the readability and compatibility of the extracted data.\n\n\n\nLinux cut Examples\n\n\n\nCut by Bytes\n\n\n\nThe Linux cut command stands as a versatile utility, and the -b option exemplifies its precision in handling binary data. In this detailed example:\n\n\n\ncut -b 1-5 filename.txt\n\n\n\n\n\n\n\nThis command adeptly extracts the first five bytes from the specified file. The Linux cut command's proficiency in byte-level manipulation is invaluable for tasks demanding a nuanced understanding of binary structures. Whether analyzing file headers or extracting specific sections from binary logs, the cut command proves indispensable in various Linux command-line scenarios.\n\n\n\nCut by Characters\n\n\n\nThe Linux cut command extends its capabilities with the -c option, enabling users to cut text based on characters. In this illustrative example:\n\n\n\ncut -c 2-6 filename.txt\n\n\n\n\n\n\n\nHere, the cut command precisely extracts characters 2 to 6 from the specified file. This feature is vital for handling textual data where character positions carry significance. The Linux cut command provides users with the flexibility to navigate and extract information at the character level, making it an essential tool for text processing tasks in the Linux environment.\n\n\n\nCut Based on a Delimiter\n\n\n\nStructured data, often found in CSV files, is efficiently managed with the Linux cut command and its -d option. Delving deeper into the example:\n\n\n\ncut -d ',' -f 2 filename.csv\n\n\n\n\n\n\n\nThis command extracts the second field from the CSV file, leveraging the comma as the delimiter. The Linux cut command showcases its adaptability to diverse data formats, making it a go-to solution for efficiently working with delimited data, whether it be commas, tabs, or other separators.\n\n\n\nCut by Fields\n\n\n\nThe Linux cut command emerges as a data manipulation powerhouse with its -f option, tailored for cutting based on fields. Delving into this robust functionality:\n\n\n\ncut -f 1,3 filename.tsv\n\n\n\n\n\n\n\nThis command exemplifies the Linux cut command's prowess in efficiently extracting specific fields from a TSV (Tab-Separated Values) file. The ability to selectively extract fields becomes crucial in scenarios involving structured data analysis, such as parsing log files or analyzing database exports. The cut command streamlines these tasks by allowing users to pinpoint and extract the necessary information with precision.\n\n\n\nConsider a practical application in the realm of log analysis, where timestamp and user activity are recorded in distinct fields. The -f option empowers users to selectively extract these fields, enabling focused analysis without unnecessary data clutter. This exemplifies the adaptability of the Linux cut command in diverse contexts, making it an invaluable asset for users dealing with structured datasets.\n\n\n\nMoreover, in the context of database exports, where data is organized into fields, the cut command's -f option becomes instrumental. Users can effortlessly extract specific columns, facilitating seamless integration with downstream processing tools or databases. This flexibility positions the cut command as a go-to solution for extracting targeted information from structured data sources.\n\n\n\nComplement a Selection\n\n\n\nThe Linux cut command offers a distinctive feature with the --complement option, providing users with a powerful twist in selections. Expanding on this advanced functionality:\n\n\n\ncut -c 2-6 --complement filename.txt\n\n\n\n\n\n\n\nIn this example, the command takes a unique approach by extracting everything from the file except characters 2 to 6. This showcases the unparalleled flexibility of the Linux cut command in data manipulation. The --complement option becomes a strategic tool, adding a layer of refinement to user selections. This feature proves invaluable in scenarios where precise exclusion is required, allowing users to tailor their selections with a level of granularity that enhances the cut command's versatility.\n\n\n\nConsider a practical application where log files contain timestamps, and users wish to exclude a specific timeframe. The --complement option proves instrumental in effortlessly removing the unwanted portion, streamlining data analysis. This adaptability is crucial for users navigating diverse text processing scenarios, showcasing the cut command's efficacy in meeting nuanced selection requirements.\n\n\n\nSpecify an Output Delimiter\n\n\n\nThe Linux cut command distinguishes itself with the -o option, providing users the ability to tailor the output format with a specified delimiter. Delving into the enhanced functionality:\n\n\n\ncut -d ',' -f 1,3 -o '|' filename.csv\n\n\n\nIn this example, the output delimiter is set to a pipe (\"|\"), a strategic choice that underscores the Linux cut command's adaptability to diverse user preferences. The cut command's flexibility in accommodating various delimiters not only enhances readability but also ensures compatibility with downstream processing tools or scripts.\n\n\n\nThis feature becomes particularly vital in situations where data integration involves multiple systems, each expecting a specific format. The Linux cut command bridges these format gaps seamlessly, illustrating its role as a facilitator in the broader context of data interoperability. Whether preparing data for database imports, log parsing, or custom scripts, the cut command proves instrumental in aligning extracted information with the desired output format.\n\n\n\nMoreover, the -o option contributes to the Linux cut command's versatility in supporting different data presentation styles. This adaptability is significant in dynamic environments where output necessities may evolve. By allowing users to define their preferred delimiters, the cut command ensures that extracted data aligns with evolving standards, enhancing its relevance in the ever-changing landscape of data processing and analysis.\n\n\n\nAlso Read: How to Master the Linux Curl Command\n\n\n\nFinal Words\n\n\n\nThe Linux cut command stands as a robust as well as versatile tool for text manipulation and extraction. Its array of options empowers users to tailor their commands to diverse data scenarios, making it an indispensable asset in the Linux command-line toolkit. By mastering the cut command, you enhance your ability to efficiently process and analyze data, streamlining your workflow in server management and beyond. Stay tuned for more insightful Serverwala blogs on Linux commands and server optimization\n","publisher":{"@id":"#Publisher","@type":"Organization","name":"Serverwala Blog","logo":{"@type":"ImageObject","url":"https:\/\/serverwala.com\/blog\/wp-content\/uploads\/2023\/10\/serverwala-header-logo.png"},"sameAs":["#","#"]},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.blog.serverwala.com\/cut-command-in-linux\/"},"author":{"@type":"Person","name":"Arpit Saini","url":"https:\/\/www.blog.serverwala.com\/author\/arpit-saini\/"},"image":{"@type":"ImageObject","url":"https:\/\/www.blog.serverwala.com\/wp-content\/uploads\/2024\/05\/Cut-Command-in-Linux-with-6-Examples-Serverwala.png","width":1200,"height":470}}</script>
+		<div id="share-buttons-bottom" class="share-buttons share-buttons-bottom">
+			<div class="share-links ">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn  large-share-button" data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="social-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn  large-share-button" data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="social-text">Twitter</span>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/&#038;title=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala" rel="external noopener nofollow" title="LinkedIn" target="_blank" class="linkedin-share-btn " data-raw="https://www.linkedin.com/shareArticle?mini=true&amp;url={post_full_link}&amp;title={post_title}">
+					<span class="share-btn-icon tie-icon-linkedin"></span> <span class="screen-reader-text">LinkedIn</span>
+				</a>
+				<a href="mailto:?subject=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;body=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn " data-raw="mailto:?subject={post_title}&amp;body={post_link}">
+					<span class="share-btn-icon tie-icon-envelope"></span> <span class="screen-reader-text">Share via Email</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		
+	</article><!-- #the-post /-->
+
+	
+	<div class="post-components">
+
+		
+		<div class="about-author container-wrapper about-author-2">
+
+								<div class="author-avatar">
+						<a href="https://www.blog.serverwala.com/author/arpit-saini/">
+							<img alt='Photo of Arpit Saini' src='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=180&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3934089db88200cab70e7bdd61787776?s=360&#038;d=mm&#038;r=g 2x' class='avatar avatar-180 photo' height='180' width='180' loading='lazy' decoding='async'/>						</a>
+					</div><!-- .author-avatar /-->
+					
+			<div class="author-info">
+
+											<h3 class="author-name"><a href="https://www.blog.serverwala.com/author/arpit-saini/">Arpit Saini</a></h3>
+						
+				<div class="author-bio">
+					He is the Director of Cloud Operations at Serverwala and also follows a passion to break complex tech topics into practical and easy-to-understand articles. He loves to write about Web Hosting, Software, Virtualization, Cloud Computing, and much more.				</div><!-- .author-bio /-->
+
+				<ul class="social-icons"></ul>			</div><!-- .author-info /-->
+			<div class="clearfix"></div>
+		</div><!-- .about-author /-->
+		<div class="prev-next-post-nav container-wrapper media-overlay">
+			<div class="tie-col-xs-6 prev-post">
+				<a href="https://www.blog.serverwala.com/how-to-copy-cut-and-paste-in-vim-vi/" style="background-image: url(https://www.blog.serverwala.com/wp-content/uploads/2024/05/How-to-Copy-Cut-and-Paste-in-Vim-Vi-390x220.png)" class="post-thumb" rel="prev">
+					<div class="post-thumb-overlay-wrap">
+						<div class="post-thumb-overlay">
+							<span class="tie-icon tie-media-icon"></span>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://www.blog.serverwala.com/how-to-copy-cut-and-paste-in-vim-vi/" rel="prev">
+					<h3 class="post-title">How to Copy, Cut, and Paste in Vim / Vi?</h3>
+				</a>
+			</div>
+
+			
+			<div class="tie-col-xs-6 next-post">
+				<a href="https://www.blog.serverwala.com/list-process-linux-how-to-check-running-processes/" style="background-image: url(https://www.blog.serverwala.com/wp-content/uploads/2024/05/List-Process-Linux-How-to-Check-Running-Processes-390x220.png)" class="post-thumb" rel="next">
+					<div class="post-thumb-overlay-wrap">
+						<div class="post-thumb-overlay">
+							<span class="tie-icon tie-media-icon"></span>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://www.blog.serverwala.com/list-process-linux-how-to-check-running-processes/" rel="next">
+					<h3 class="post-title">List Process Linux - How to Check Running Processes?</h3>
+				</a>
+			</div>
+
+			</div><!-- .prev-next-post-nav /-->
+	
+
+				<div id="related-posts" class="container-wrapper has-extra-post">
+
+					<div class="mag-box-title the-global-title">
+						<h3>Related Articles</h3>
+					</div>
+
+					<div class="related-posts-list">
+
+					
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="How to Master the Linux Curl Command: Tips and Tricks?" href="https://www.blog.serverwala.com/how-to-master-the-linux-curl-command/" class="post-thumb"><img width="390" height="220" src="https://www.blog.serverwala.com/wp-content/uploads/2023/12/How-to-Master-the-Linux-Curl-Command-Tips-and-Tricks-390x220.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="How to Master the Linux Curl Command: Tips and Tricks?" decoding="async" loading="lazy" /></a>
+								<h3 class="post-title"><a href="https://www.blog.serverwala.com/how-to-master-the-linux-curl-command/">How to Master the Linux Curl Command: Tips and Tricks?</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">30/12/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="How to Format USB Drive on Linux?" href="https://www.blog.serverwala.com/how-to-format-usb-drive-on-linux/" class="post-thumb"><img width="390" height="220" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/How-to-Format-Your-USB-Drive-on-Linux-390x220.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="USB Drive on Linux" decoding="async" loading="lazy" /></a>
+								<h3 class="post-title"><a href="https://www.blog.serverwala.com/how-to-format-usb-drive-on-linux/">How to Format USB Drive on Linux?</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">08/05/2024</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="How to Install Docker on CentOS 7?" href="https://www.blog.serverwala.com/how-to-install-docker-on-centos-7/" class="post-thumb"><img width="390" height="220" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/How-to-Install-Docker-on-CentOS-7-390x220.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Install Docker on CentOS 7" decoding="async" loading="lazy" /></a>
+								<h3 class="post-title"><a href="https://www.blog.serverwala.com/how-to-install-docker-on-centos-7/">How to Install Docker on CentOS 7?</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">08/05/2024</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+							<div class="related-item tie-standard">
+
+								
+			<a aria-label="14 Tar Command in Linux (with Examples)" href="https://www.blog.serverwala.com/14-tar-command-in-linux-with-examples-serverwala/" class="post-thumb"><img width="390" height="220" src="https://www.blog.serverwala.com/wp-content/uploads/2023/10/unnamed-28-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="14 Tar Command in Linux" decoding="async" loading="lazy" srcset="https://www.blog.serverwala.com/wp-content/uploads/2023/10/unnamed-28-390x220.png 390w, https://www.blog.serverwala.com/wp-content/uploads/2023/10/unnamed-28-300x169.png 300w, https://www.blog.serverwala.com/wp-content/uploads/2023/10/unnamed-28.png 512w" sizes="auto, (max-width: 390px) 100vw, 390px" /></a>
+								<h3 class="post-title"><a href="https://www.blog.serverwala.com/14-tar-command-in-linux-with-examples-serverwala/">14 Tar Command in Linux (with Examples)</a></h3>
+
+								<div class="post-meta clearfix"><span class="date meta-item tie-icon">28/10/2023</span></div><!-- .post-meta -->							</div><!-- .related-item /-->
+
+						
+					</div><!-- .related-posts-list /-->
+				</div><!-- #related-posts /-->
+
+			
+	</div><!-- .post-components /-->
+
+	
+</div><!-- .main-content -->
+
+
+	<div id="check-also-box" class="container-wrapper check-also-right">
+
+		<div class="widget-title the-global-title">
+			<div class="the-subtitle">Check Also</div>
+
+			<a href="#" id="check-also-close" class="remove">
+				<span class="screen-reader-text">Close</span>
+			</a>
+		</div>
+
+		<div class="widget posts-list-big-first has-first-big-post">
+			<ul class="posts-list-items">
+
+			
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Use the less Command in Linux with Examples" href="https://www.blog.serverwala.com/use-the-less-command-in-linux-with-examples/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-24">Linux</span></span><img width="390" height="220" src="https://www.blog.serverwala.com/wp-content/uploads/2024/06/Use-the-less-Command-in-Linux-with-Examples-Serverwala-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="Use the less Command in Linux with Examples" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/use-the-less-command-in-linux-with-examples/">Use the less Command in Linux with Examples</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">22/06/2024</span>		</div>
+	</div>
+</li>
+
+			</ul><!-- .related-posts-list /-->
+		</div>
+	</div><!-- #related-posts /-->
+
+	
+	<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
+		<div class="theiaStickySidebar">
+			<div id="search-3" class="container-wrapper widget widget_search"><form role="search" method="get" class="search-form" action="https://www.blog.serverwala.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form><div class="clearfix"></div></div><!-- .widget /--><div id="categories-2" class="container-wrapper widget widget_categories"><div class="widget-title the-global-title"><div class="the-subtitle">categories<span class="widget-title-icon tie-icon"></span></div></div><form action="https://www.blog.serverwala.com" method="get"><label class="screen-reader-text" for="cat">categories</label><select  name='cat' id='cat' class='postform'>
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="28">Cloud Computing</option>
+	<option class="level-0" value="23">Colocation</option>
+	<option class="level-0" value="30">Data Centers</option>
+	<option class="level-0" value="29">Data Protection</option>
+	<option class="level-0" value="21">Dedicated Servers</option>
+	<option class="level-0" value="20">DevOps</option>
+	<option class="level-0" value="24">Linux</option>
+	<option class="level-0" value="27">Technology</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="22">VPS Servers</option>
+	<option class="level-0" value="26">Web Hosting</option>
+	<option class="level-0" value="25">Windows</option>
+</select>
+</form><script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+
+/* ]]> */
+</script>
+<div class="clearfix"></div></div><!-- .widget /-->
+		<div id="recent-posts-3" class="container-wrapper widget widget_recent_entries">
+		<div class="widget-title the-global-title"><div class="the-subtitle">Recent Posts<span class="widget-title-icon tie-icon"></span></div></div>
+		<ul>
+											<li>
+					<a href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/">Connecting to a server using the BMC portal remote console</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/">How to Secure Your CI/CD Pipeline</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/">Bringing AI-Ready Datacenters to Life with AMD EPYC</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/">Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/">The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards</a>
+									</li>
+					</ul>
+
+		<div class="clearfix"></div></div><!-- .widget /-->
+			<div id="widget_tabs-3" class="container-wrapper tabs-container-wrapper tabs-container-3">
+				<div class="widget tabs-widget">
+					<div class="widget-container">
+						<div class="tabs-widget">
+							<div class="tabs-wrapper">
+
+								<ul class="tabs">
+									<li><a href="#widget_tabs-3-recent">Recent</a></li><li><a href="#widget_tabs-3-popular">Popular</a></li><li><a href="#widget_tabs-3-comments">Comments</a></li>								</ul><!-- ul.tabs-menu /-->
+
+								
+											<div id="widget_tabs-3-recent" class="tab-content tab-content-recent">
+												<ul class="tab-content-elements">
+													
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Connecting to a server using the BMC portal remote console" href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Connecting-to-a-server-using-the-BMC-portal-remote-console-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Connecting to a Server using the BMC portal Remote Console" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/">Connecting to a server using the BMC portal remote console</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">14 minutes ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Secure Your CI/CD Pipeline" href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/How-to-Secure-Your-CICD-Pipeline-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="How to Secure Your CI/CD Pipeline" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/">How to Secure Your CI/CD Pipeline</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">1 day ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Bringing AI-Ready Datacenters to Life with AMD EPYC" href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Bringing-AI-Ready-Datacenters-to-Life-with-AMD-EPYC-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Bringing AI-Ready Datacenters to Life with AMD EPYC" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/">Bringing AI-Ready Datacenters to Life with AMD EPYC</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">2 days ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure" href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Top-5-Benefits-of-Using-AMD-EPYC-Processors-for-Your-Cloud-Infrastructure-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/">Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">5 days ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards" href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/The-Rise-of-AMD-EPYC-in-Cloud-Computing-How-Its-Redefining-Performance-Standards-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="The Rise of AMD EPYC in Cloud Computing: How It&#039;s Redefining Performance Standards" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/">The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">6 days ago</span>		</div>
+	</div>
+</li>
+												</ul>
+											</div><!-- .tab-content#recent-posts-tab /-->
+
+										
+											<div id="widget_tabs-3-popular" class="tab-content tab-content-popular">
+												<ul class="tab-content-elements">
+													
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Install PIP on Windows for Python: Step By Step Guide" href="https://www.blog.serverwala.com/how-to-install-pip-on-windows-for-python/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/07/How-to-Install-PIP-on-Windows-for-Python_-step-by-step-guide-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Install PIP on Windows for Python" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-install-pip-on-windows-for-python/">How to Install PIP on Windows for Python: Step By Step Guide</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">05/07/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Netcat Command (nc) in Linux with Examples" href="https://www.blog.serverwala.com/netcat-command-in-linux/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/Netcat-nc-Command-with-Examples-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Netcat (nc) Command" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/netcat-command-in-linux/">Netcat Command (nc) in Linux with Examples</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">06/05/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Install Google Chrome on Ubuntu?" href="https://www.blog.serverwala.com/how-to-install-google-chrome-on-ubuntu/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/06/How-to-Install-Google-Chrome-on-Ubuntu-10-6-24-1-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Install Google Chrome on Ubuntu" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-install-google-chrome-on-ubuntu/">How to Install Google Chrome on Ubuntu?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">12/06/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Reset or Change the Root Password in Linux?" href="https://www.blog.serverwala.com/how-to-reset-or-change-the-root-password-in-linux/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/04/Blog-image-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Reset or Change the Root Password in Linux" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-reset-or-change-the-root-password-in-linux/">How to Reset or Change the Root Password in Linux?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">16/04/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How do you start, stop, and restart Apache in Ubuntu?" href="https://www.blog.serverwala.com/how-do-you-start-stop-and-restart-apache-in-ubuntu/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/06/How-to-Start-Stop-Restart-Apache-in-Ubuntu-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="How to Start, Stop, Restart Apache in Ubuntu" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-do-you-start-stop-and-restart-apache-in-ubuntu/">How do you start, stop, and restart Apache in Ubuntu?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">13/06/2024</span>		</div>
+	</div>
+</li>
+												</ul>
+											</div><!-- .tab-content#popular-posts-tab /-->
+
+										
+											<div id="widget_tabs-3-comments" class="tab-content tab-content-comments">
+												<ul class="tab-content-elements">
+																									</ul>
+											</div><!-- .tab-content#comments-tab /-->
+
+										
+							</div><!-- .tabs-wrapper-animated /-->
+						</div><!-- .tabs-widget /-->
+					</div><!-- .widget-container /-->
+				</div><!-- .tabs-widget /-->
+			</div><!-- .container-wrapper /-->
+					</div><!-- .theiaStickySidebar /-->
+	</aside><!-- .sidebar /-->
+	<!-- MagenetMonetization 5 --><section id="custom_html-81" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div style="display:none">
+<ul><a href="https://rsudhanafie.bungokab.go.id/apps/" rel="dofollow">situs toto</a></ul>
+<ul><a href="https://peoplentools.com/" rel="dofollow">situs toto</a></ul>
+<ul><a href="https://princearmory.com/" rel="dofollow">situs toto</a></ul>
+<ul><a href="https://rsudngimbang.lamongankab.go.id/" rel="dofollow">situs toto</a></ul>
+<ul><a href="https://qris.gazala.co.id/" rel="dofollow">slot qris</a></ul>
+<ul><a href="https://uoa.ac.tz/" rel="dofollow">situs toto</a></ul>
+</div></div></section>
+</div><!-- .main-content-row /--></div><!-- #content /-->
+<footer id="footer" class="site-footer dark-skin dark-widgetized-area">
+
+	
+</footer><!-- #footer /-->
+
+
+		<div id="share-buttons-mobile" class="share-buttons share-buttons-mobile">
+			<div class="share-links  icons-only">
+				
+				<a href="https://www.facebook.com/sharer.php?u=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn " data-raw="https://www.facebook.com/sharer.php?u={post_link}">
+					<span class="share-btn-icon tie-icon-facebook"></span> <span class="screen-reader-text">Facebook</span>
+				</a>
+				<a href="https://twitter.com/intent/tweet?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala&#038;url=https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn " data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
+					<span class="share-btn-icon tie-icon-twitter"></span> <span class="screen-reader-text">Twitter</span>
+				</a>
+				<a href="https://api.whatsapp.com/send?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala%20https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn " data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="screen-reader-text">WhatsApp</span>
+				</a>
+				<a href="https://telegram.me/share/url?url=https://www.blog.serverwala.com/cut-command-in-linux/&text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala" rel="external noopener nofollow" title="Telegram" target="_blank" class="telegram-share-btn " data-raw="https://telegram.me/share/url?url={post_link}&text={post_title}">
+					<span class="share-btn-icon tie-icon-paper-plane"></span> <span class="screen-reader-text">Telegram</span>
+				</a>
+				<a href="viber://forward?text=Cut%20Command%20in%20Linux%20with%206%20Examples%20%E2%80%93%20Serverwala%20https://www.blog.serverwala.com/cut-command-in-linux/" rel="external noopener nofollow" title="Viber" target="_blank" class="viber-share-btn " data-raw="viber://forward?text={post_title}%20{post_link}">
+					<span class="share-btn-icon tie-icon-phone"></span> <span class="screen-reader-text">Viber</span>
+				</a>			</div><!-- .share-links /-->
+		</div><!-- .share-buttons /-->
+
+		<div class="mobile-share-buttons-spacer"></div>
+
+		</div><!-- #tie-wrapper /-->
+
+		
+	<aside class=" side-aside normal-side dark-skin dark-widgetized-area slide-sidebar-desktop is-fullwidth appear-from-left" aria-label="Secondary Sidebar" style="visibility: hidden;">
+		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+
+			<a href="#" class="close-side-aside remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a><!-- .close-side-aside /-->
+
+
+			
+				<div id="mobile-container">
+
+											<div id="mobile-search">
+							<form role="search" method="get" class="search-form" action="https://www.blog.serverwala.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>							</div><!-- #mobile-search /-->
+						
+					<div id="mobile-menu" class="hide-menu-icons">
+											</div><!-- #mobile-menu /-->
+
+											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="#"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="#"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li></ul> 
+						</div><!-- #mobile-social-icons /-->
+						
+				</div><!-- #mobile-container /-->
+			
+
+							<div id="slide-sidebar-widgets">
+					<div id="search-3" class="container-wrapper widget widget_search"><form role="search" method="get" class="search-form" action="https://www.blog.serverwala.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form><div class="clearfix"></div></div><!-- .widget /--><div id="categories-2" class="container-wrapper widget widget_categories"><div class="widget-title the-global-title"><div class="the-subtitle">categories<span class="widget-title-icon tie-icon"></span></div></div><form action="https://www.blog.serverwala.com" method="get"><label class="screen-reader-text" for="categories-dropdown-2">categories</label><select  name='cat' id='categories-dropdown-2' class='postform'>
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="28">Cloud Computing</option>
+	<option class="level-0" value="23">Colocation</option>
+	<option class="level-0" value="30">Data Centers</option>
+	<option class="level-0" value="29">Data Protection</option>
+	<option class="level-0" value="21">Dedicated Servers</option>
+	<option class="level-0" value="20">DevOps</option>
+	<option class="level-0" value="24">Linux</option>
+	<option class="level-0" value="27">Technology</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="22">VPS Servers</option>
+	<option class="level-0" value="26">Web Hosting</option>
+	<option class="level-0" value="25">Windows</option>
+</select>
+</form><script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "categories-dropdown-2" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+
+/* ]]> */
+</script>
+<div class="clearfix"></div></div><!-- .widget /-->
+		<div id="recent-posts-3" class="container-wrapper widget widget_recent_entries">
+		<div class="widget-title the-global-title"><div class="the-subtitle">Recent Posts<span class="widget-title-icon tie-icon"></span></div></div>
+		<ul>
+											<li>
+					<a href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/">Connecting to a server using the BMC portal remote console</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/">How to Secure Your CI/CD Pipeline</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/">Bringing AI-Ready Datacenters to Life with AMD EPYC</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/">Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure</a>
+									</li>
+											<li>
+					<a href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/">The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards</a>
+									</li>
+					</ul>
+
+		<div class="clearfix"></div></div><!-- .widget /-->
+			<div id="widget_tabs-3" class="container-wrapper tabs-container-wrapper tabs-container-3">
+				<div class="widget tabs-widget">
+					<div class="widget-container">
+						<div class="tabs-widget">
+							<div class="tabs-wrapper">
+
+								<ul class="tabs">
+									<li><a href="#widget_tabs-3-recent">Recent</a></li><li><a href="#widget_tabs-3-popular">Popular</a></li><li><a href="#widget_tabs-3-comments">Comments</a></li>								</ul><!-- ul.tabs-menu /-->
+
+								
+											<div id="widget_tabs-3-recent" class="tab-content tab-content-recent">
+												<ul class="tab-content-elements">
+													
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Connecting to a server using the BMC portal remote console" href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Connecting-to-a-server-using-the-BMC-portal-remote-console-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Connecting to a Server using the BMC portal Remote Console" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/connecting-to-a-server-using-the-bmc-portal-remote-console/">Connecting to a server using the BMC portal remote console</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">14 minutes ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Secure Your CI/CD Pipeline" href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/How-to-Secure-Your-CICD-Pipeline-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="How to Secure Your CI/CD Pipeline" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-secure-your-ci-cd-pipeline/">How to Secure Your CI/CD Pipeline</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">1 day ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Bringing AI-Ready Datacenters to Life with AMD EPYC" href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Bringing-AI-Ready-Datacenters-to-Life-with-AMD-EPYC-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Bringing AI-Ready Datacenters to Life with AMD EPYC" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/bringing-ai-ready-datacenters-to-life-with-amd-epyc/">Bringing AI-Ready Datacenters to Life with AMD EPYC</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">2 days ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure" href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/Top-5-Benefits-of-Using-AMD-EPYC-Processors-for-Your-Cloud-Infrastructure-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/top-5-benefits-of-using-amd-epyc-processors-for-your-cloud-infrastructure/">Top 5 Benefits of Using AMD EPYC Processors for Your Cloud Infrastructure</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">5 days ago</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards" href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/12/The-Rise-of-AMD-EPYC-in-Cloud-Computing-How-Its-Redefining-Performance-Standards-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="The Rise of AMD EPYC in Cloud Computing: How It&#039;s Redefining Performance Standards" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/the-rise-of-amd-epyc-in-cloud-computing-how-its-redefining-performance-standards/">The Rise of AMD EPYC in Cloud Computing: How It&#8217;s Redefining Performance Standards</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">6 days ago</span>		</div>
+	</div>
+</li>
+												</ul>
+											</div><!-- .tab-content#recent-posts-tab /-->
+
+										
+											<div id="widget_tabs-3-popular" class="tab-content tab-content-popular">
+												<ul class="tab-content-elements">
+													
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Install PIP on Windows for Python: Step By Step Guide" href="https://www.blog.serverwala.com/how-to-install-pip-on-windows-for-python/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/07/How-to-Install-PIP-on-Windows-for-Python_-step-by-step-guide-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Install PIP on Windows for Python" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-install-pip-on-windows-for-python/">How to Install PIP on Windows for Python: Step By Step Guide</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">05/07/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="Netcat Command (nc) in Linux with Examples" href="https://www.blog.serverwala.com/netcat-command-in-linux/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/05/Netcat-nc-Command-with-Examples-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Netcat (nc) Command" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/netcat-command-in-linux/">Netcat Command (nc) in Linux with Examples</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">06/05/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Install Google Chrome on Ubuntu?" href="https://www.blog.serverwala.com/how-to-install-google-chrome-on-ubuntu/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/06/How-to-Install-Google-Chrome-on-Ubuntu-10-6-24-1-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Install Google Chrome on Ubuntu" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-install-google-chrome-on-ubuntu/">How to Install Google Chrome on Ubuntu?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">12/06/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How to Reset or Change the Root Password in Linux?" href="https://www.blog.serverwala.com/how-to-reset-or-change-the-root-password-in-linux/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/04/Blog-image-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="Reset or Change the Root Password in Linux" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-to-reset-or-change-the-root-password-in-linux/">How to Reset or Change the Root Password in Linux?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">16/04/2024</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="How do you start, stop, and restart Apache in Ubuntu?" href="https://www.blog.serverwala.com/how-do-you-start-stop-and-restart-apache-in-ubuntu/" class="post-thumb"><img width="220" height="150" src="https://www.blog.serverwala.com/wp-content/uploads/2024/06/How-to-Start-Stop-Restart-Apache-in-Ubuntu-220x150.png" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="How to Start, Stop, Restart Apache in Ubuntu" decoding="async" loading="lazy" /></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<a class="post-title the-subtitle" href="https://www.blog.serverwala.com/how-do-you-start-stop-and-restart-apache-in-ubuntu/">How do you start, stop, and restart Apache in Ubuntu?</a>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">13/06/2024</span>		</div>
+	</div>
+</li>
+												</ul>
+											</div><!-- .tab-content#popular-posts-tab /-->
+
+										
+											<div id="widget_tabs-3-comments" class="tab-content tab-content-comments">
+												<ul class="tab-content-elements">
+																									</ul>
+											</div><!-- .tab-content#comments-tab /-->
+
+										
+							</div><!-- .tabs-wrapper-animated /-->
+						</div><!-- .tabs-widget /-->
+					</div><!-- .widget-container /-->
+				</div><!-- .tabs-widget /-->
+			</div><!-- .container-wrapper /-->
+							</div>
+			
+		</div><!-- .side-aside-wrapper /-->
+	</aside><!-- .side-aside /-->
+
+	
+	</div><!-- #tie-container /-->
+</div><!-- .background-overlay /-->
+
+<script>\
+//Get the button
+ var btn = $('#btn-back-to-top');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+   $('#inquiry_form').submit(function(event){
+                event.preventDefault()
+               if(grecaptcha.getResponse() == "") {
+                    toastr.error('Please Select Valid Recaptcha',"Error");
+                    return false;
+                  }
+                $.post('/contactmail.php',$('#inquiry_form').serialize(),function(result){
+                    if(result){
+                       $('#inquiry_form').trigger('reset');
+                       $('#inquiry_form')[0].reset();
+                       grecaptcha.reset();
+                       toastr.success('Thank you for your enquiry. We will get in touch with you shortly',"Success");
+                    }else{
+                       toastr.error('Somthing Went Wrong',"Error");
+                    }
+                })
+            });
+	
+		$(document).ready(function(){
+				var currency={'USD':1,'INR':80}
+				$(".price-inr1").each(function(i,v) {
+					usdtext=$(this).children('.js-montlypricing').text();
+					usdp=usdtext.replace('$','');
+					if(usdp){
+						inrp=(parseFloat(usdp)*currency.INR).toFixed(2);
+						$(this).children('.js-yearlypricing').text('₹'+inrp)
+					}
+				});
+            $('img.lazy').lazyload({
+                effect: "fadeIn"
+            });
+           
+          
+         });
+</script>
+
+
+
+<!-- Start of  Zendesk Widget script -->
+<!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1de997b8-d51a-412b-bf73-4eac213e814e"> </script>-->
+<!-- End of  Zendesk Widget script -->
+
+<!-- <script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "ojsgtlvk",
+    email: "sales@serverwala.com", // Email address
+    user_hash: "x7MgTejKSuBuzAAXD_tMJc7ocIbF7hLvMViTRDVO" // HMAC using SHA-256
+  };
+</script>
+<script>
+// We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ojsgtlvk'
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ojsgtlvk';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script> -->
+
+<!-- <script>
+  window.intercomSettings = {
+    api_base: "https://api-iam.intercom.io",
+    app_id: "ojsgtlvk"
+  };
+</script>
+<script>
+// We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/ojsgtlvk'
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ojsgtlvk';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script> -->
+
+<!-- Start of  Zendesk Widget script -->
+<!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1de997b8-d51a-412b-bf73-4eac213e814e"> </script>  -->
+<!-- End of  Zendesk Widget script -->
+
+<!--Start of Tawk.to Script-->
+ <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d835b1fc22bdd393bb6a9f0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> 
+<!--End of Tawk.to Script-->
+
+
+
+<script>
+    (function(w,d,s,c,r,a,m){
+      w['KiwiObject']=r;
+      w[r]=w[r] || function () {
+        (w[r].q=w[r].q||[]).push(arguments)};
+      w[r].l=1*new Date();
+        a=d.createElement(s);
+        m=d.getElementsByTagName(s)[0];
+      a.async=1;
+      a.src=c;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
+    window.onload = function () {
+      kiwi.init('', 'Za89K4khc8YOIvMNb43LHvOiV08418Me', {});
+    }
+  </script>
+<style>
+	.footer-block .footer-head {
+    position: relative;
+}
+	.footer-block .footer-head:after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 75px;
+    background: #00c0f7;
+    content: '';
+    border-radius: 5px;
+}
+footer {
+    padding-top: 80px;
+    background-color: #00131C;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-position-x: 100%;
+}
+.container {
+    max-width: 1400px;
+}
+.footer_top {
+    display: flex;
+    justify-content: center;
+     
+    padding-bottom: 50px;
+}
+.single_footer_top {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    border-right: 1px solid rgba(97, 97, 97, .5);
+}
+.single_footer_top:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+.mail_title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.mail_desc {
+    color: #ccc;
+    font-size: 14px;
+    
+}
+.single_footer_top:nth-child(2) {
+    width: calc(35% - 30px);
+}
+.single_footer_top {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    border-right: 1px solid rgba(97, 97, 97, .5);
+}
+.w-100 {
+    width: 100%;
+}
+.position-relative {
+    position: relative;
+}
+.mail {
+    width: 80%;
+     
+    padding: 12px 20px;
+    height: 48px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: none;
+	  background:#fff;
+}
+.btn_mail {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+.btn_mail a {
+    display: block;
+    padding: 12px 30px;
+    background-color: #00c0f7;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+	height:48px;
+}
+.mail_title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}	
+.footer_call {
+    color: #fff;
+    transition: .3s;
+    font-size: 26px;
+   
+}
+.single_footer_top:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+.footer_icon {
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+.footer_icon li:first-child a {
+    padding-left: 0;
+}
+.footer_icon li a {
+    color: #fff;
+    font-size: 24px;
+    padding: 0 15px;
+    transition: .3s;
+}
+.footer-block {
+    display: flex;
+	 
+}
+.footer-block {
+    display: flex;
+    border-top: 1px solid rgba(97, 97, 97, .5);
+    padding: 60px 0;
+}
+.justify-content-between {
+    justify-content: space-between!important;
+}
+.footer-block div {
+    margin-right: 68px;
+}
+.footer-second-block {
+    width: 14%;
+}
+	.single_footer_top input.mail:focus , .single_footer_top input.mail:hover {
+    background: #fff;
+}
+ 
+.footer-head {
+    color: #fff;
+    font-size: 23px;
+   font-weight:bold;
+    margin-bottom: 20px !important;
+}
+.footer-second-block a {
+    color: #fff;
+    font-size: 15px;
+    
+    margin-bottom: 20px;
+    display: block;
+}
+.footer-block div:last-child {
+    margin-right: 0;
+}
+.company-adress {
+    display: flex;
+	 
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.company-adress img {
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.company-adress .company-content {
+    margin-top: 0;
+}
+.company-content {
+    font-size: 14px;
+    
+    color: #fff;
+    margin-top: 20px;
+}
+.company-adress img {
+    margin-right: 10px;
+    margin-top: 6px;
+}
+ .footer_bottom {
+    padding: 25px 0;
+    background-color: rgb(0,10,15,0.8);
+}
+.copy_right {
+    width: 50%;
+}
+.copyright_title {
+    color: #fff;
+    
+}
+.copyright_title span {
+    color: #00c0f7;
+}
+.payment {
+    width: calc(50% - 30px) !important;
+}
+	.company-adress {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+	.d-flex{
+		display:flex;
+	}
+	.justify-content-lg-end {
+   
+    justify-content: flex-end!important;
+}
+	@media (max-width:992px){
+		.footer_top {
+    flex-wrap: wrap;
+}
+
+.footer_top .single_footer_top {
+    border-right: 0;
+    margin: 15px;
+}
+
+.single_footer_top:nth-child(2) {
+    width: calc(97% - 30px);
+}
+.single_footer_top {
+    width: calc(97% - 30px);
+}
+.footer-second-block {
+    width: 35% !important;
+   
+}
+		.flex-warp{
+			flex-wrap:wrap;
+		}
+	}
+</style>
+    
+    <footer>
+        <div class="container">
+
+            <div class="footer_top">
+                <div class="single_footer_top">
+                    <div class="w-100">
+                        <p class="mail_title">Get in Touch!</p>
+                        <p class="mail_desc">Enter your email to find out the latest news and offers from Serverwala.</p>
+                    </div>
+                </div>
+                <div class="single_footer_top">
+                    <div class="w-100">
+
+                        <div class="position-relative">
+                            <input type="text" name="" class="mail" placeholder="your@email.com">
+                            <div class="btn_mail">
+                                <a href="#">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_footer_top">
+                    <div class="w-100">
+                        <div>
+                            <p class="mail_title">Call Us</p>
+                            <a href="tel:9772222179" class="footer_call">+91 7300005415</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_footer_top">
+                    <div class="w-100">
+                        <p class="mail_title">Connect With Us</p>
+                        <ul class="footer_icon">
+                            <li> <a href="https://www.facebook.com/ServerWala"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/Server_Wala"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/serverwala"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/serverwala"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-block justify-content-between">
+                <div class="footer-second-block">
+                    <p class="footer-head">Company</p>
+                    <p><a href="https://www.serverwala.com/about-us">About us</a></p>
+                    <p><a href="https://serverwala.com/team-culture">Our Team</a></p>
+                    <p><a href="https://serverwala.com/blog/">Blog</a></p>
+                    <p><a href="https://www.serverwala.com/career/">Career</a></p>
+                    <p><a href="https://www.serverwala.com/case-studies/">Case Studies</a></p>
+					<p><a href="https://www.serverwala.com/contact-us">Contact Us</a></p>
+					<p><a href="#">Certifications</a></p>
+					<p><a href="https://www.serverwala.com/partner-network">Our Partners</a></p>
+                    <p class="footer-head">Services</p>
+                    <p><a href="https://www.serverwala.com/dedicated-servers">Dedicated</a></p>
+                    <p><a href="https://www.serverwala.com/vps-servers">VPS</a></p>
+                    <p><a href="https://www.serverwala.com/colocation-usa">Co-Location</a></p>
+            
+                </div>
+                <div class="footer-second-block">
+                    <p class="footer-head">Cloud Services</p>
+                    <!--<p><a href="https://www.serverwala.com/edgeqloud">Edge Qloud</a></p>-->
+                    <p><a href="https://www.serverwala.com/new-page/bare-metal">Bare Metal Cloud</a></p>
+                    <p><a href="https://www.serverwala.com/hosting/arm-based-cloud">Arm-Based Cloud</a></p>
+                    <p><a href="https://www.serverwala.com/hosting/amd-epyc-cloud">AMD EPYC Cloud</a></p>
+					<p><a href="https://www.serverwala.com/hosting/gpu-cloud">GPU Cloud</a></p>
+					<p><a href="https://www.serverwala.com/hosting/forex-cloud">Forex Cloud</a></p>
+                    <p class="footer-head">Network Services</p>
+                    <p><a href="https://www.serverwala.com/products/network-peering">Network peering</a></p>
+					<p><a href="https://www.serverwala.com/products/global-network">Global Network</a></p>
+					<p><a href="https://www.serverwala.com/products/sd-wan">SD-WAN</a></p>
+					<p><a href="https://www.serverwala.com/products/leased-line">Leased Line</a></p>
+					<p><a href="https://www.serverwala.com/products/cross-connects">Cross Connects</a></p>
+					<p><a href="https://www.serverwala.com/products/managed-access-Port">Managed Access Port</a></p>
+					<p><a href="https://www.serverwala.com/products/managed-access-Port">Global Cloud Konnect</a></p>
+					<p><a href="https://www.serverwala.com/products/data-center-interconnect">Data Center Interconnect</a></p>
+					
+                  
+                </div>
+                <div class="footer-second-block footer-service-block">
+                    <p class="footer-head">Compliance</p>
+                    <p><a href="https://www.serverwala.com/report-abuse">Legal/Abuse</a></p>
+                    <p><a href="https://www.serverwala.com/sla">SLA</a></p>
+                    <p><a href="https://www.serverwala.com/term-condition">Terms &amp; Condtions</a></p>
+                    <p><a href="https://www.serverwala.com/privacy-policy">Privacy Policy</a></p>
+					<p><a href="https://www.serverwala.com/gdpr">GDPR</a></p>
+                    <p class="footer-head">Partners</p>
+                    <p><a href="#">Affiliate &amp; Referral Program</a></p>
+                    <p><a href="#">Reseller Hosting</a></p>
+					 <p><a href="#">Web Professional</a></p>
+					 <p><a href="#">Partner Directory</a></p>
+                </div>
+                <div class="footer-second-block">
+                    <p class="footer-head">Needs</p>
+                    <p><a href="https://www.serverwala.com/baas/acronis-cyber-protect">Acronis Cyber Protect </a></p>
+                    <p><a href="https://www.serverwala.com/baas/cloud-nas">Cloud NAS</a></p>
+                    <p><a href="https://www.serverwala.com/baas/ransomware-protection">Ransomware Protection</a></p>
+                    <p><a href="https://www.serverwala.com/baas/cpanel-backup">cPanel Backup</a></p>
+                   
+                    <p class="footer-head">Industry Solutions</p>
+                    <p><a href="https://www.serverwala.com/solutions/optimize-it-spend">Optimize IT Spend</a></p>
+                    <p><a href="https://www.serverwala.com/solutions/business-continuity">Business Continuity</a></p>
+                    <p><a href="https://www.serverwala.com/solutions/protect-my-data">Protect My Data</a></p>
+					<p><a href="https://www.serverwala.com/solutions/improve-performance">Improve Performance</a></p>
+					<p><a href="https://www.serverwala.com/solutions/close-it-skills-gap">Close IT Skills Gap</a></p>
+					<p><a href="https://www.serverwala.com/solutions/modernize-it">Modernize IT</a></p>
+					<p><a href="https://www.serverwala.com/solutions/cloud-enhanced-innovation">Cloud-Enhanced Innovation</a></p>
+                </div>
+                <div class="footer-last-block">
+                    <p class="footer-head">Get in Touch</p>
+                    <div class="company-adress">
+                        <img src="https://serverwala.com/blog/wp-content/uploads/2023/12/company-location.png">
+                        <p class="company-content"><b>Server Wala Cloud Datacenters PVT. LTD.</b><br>Jaipur Electronic Market<br>Ridhi Sidhi Circle, Gopalpura Byepass<br>Jaipur(RJ), INDIA</p>
+                    </div>
+                    <div class="company-adress">
+                        <img src="https://serverwala.com/blog/wp-content/uploads/2023/12/company-mail.png">
+                        <p class="company-content" style="color:#fff;"><b>Technical Support:</b> dctech@serverwala.com<br><b>Billing Inquiries:</b> accounts@serverwala.com<br><b>Sales Inquiries:</b> sales@serverwala.com</p>
+                    </div>
+                    <div class="company-adress">
+                        <img src="https://serverwala.com/blog/wp-content/uploads/2023/12/company-phone.png">
+                        <p class="company-content"><b>Sales :</b> +91 7300005415<br><b>Support :</b> +91 8003399228<br><b>Accounts :</b> +91 7073977799</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="d-flex flex-warp">
+                    <div class="copy_right d-flex align-items-center">
+                        <p class="copyright_title">Copyright 2021 <span> Serverwala Cloud Datacenters Private Limited. </span> All Rights Reserved</p>
+                    </div>
+                    <div class="payment d-flex justify-content-lg-end">
+                        <img src="https://serverwala.com/blog/wp-content/uploads/2023/12/payment-img-new-w.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+<!--chat boat-->
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5d835b1fc22bdd393bb6a9f0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+<script>
+    (function(w,d,s,c,r,a,m){
+      w['KiwiObject']=r;
+      w[r]=w[r] || function () {
+        (w[r].q=w[r].q||[]).push(arguments)};
+      w[r].l=1*new Date();
+        a=d.createElement(s);
+        m=d.getElementsByTagName(s)[0];
+      a.async=1;
+      a.src=c;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script',"https://app.interakt.ai/kiwi-sdk/kiwi-sdk-17-prod-min.js?v="+ new Date().getTime(),'kiwi');
+    window.onload = function () {
+      kiwi.init('', 'Za89K4khc8YOIvMNb43LHvOiV08418Me', {});
+    }
+  </script><div id="reading-position-indicator"></div><div id="autocomplete-suggestions" class="autocomplete-suggestions"></div><div id="is-scroller-outer"><div id="is-scroller"></div></div><div id="fb-root"></div>		<div id="tie-popup-search-mobile" class="tie-popup tie-popup-search-wrap" style="display: none;">
+			<a href="#" class="tie-btn-close remove big-btn light-btn">
+				<span class="screen-reader-text">Close</span>
+			</a>
+			<div class="popup-search-wrap-inner">
+
+				<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
+
+										<form method="get" class="tie-popup-search-form" action="https://www.blog.serverwala.com/">
+							<input class="tie-popup-search-input " inputmode="search" type="text" name="s" title="Search for" autocomplete="off" placeholder="Search for" />
+							<button class="tie-popup-search-submit" type="submit">
+								<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+								<span class="screen-reader-text">Search for</span>
+							</button>
+						</form>
+						
+				</div><!-- .pop-up-live-search /-->
+
+			</div><!-- .popup-search-wrap-inner /-->
+		</div><!-- .tie-popup-search-wrap /-->
+		<link rel='stylesheet' id='lwptoc-main-css' href='https://www.blog.serverwala.com/wp-content/plugins/luckywp-table-of-contents/front/assets/main.min.css?ver=2.1.4' type='text/css' media='all' />
+<script type="text/javascript" id="copy-the-code-js-extra">
+/* <![CDATA[ */
+var copyTheCode = {"trim_lines":"","remove_spaces":"1","copy_content_as":"","previewMarkup":"<h2>Hello World<\/h2>","buttonMarkup":"<button class=\"copy-the-code-button\" title=\"\"><\/button>","buttonSvg":"<svg aria-hidden=\"true\" focusable=\"false\" role=\"img\" class=\"copy-icon\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"currentColor\"><path d=\"M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z\"><\/path><path d=\"M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z\"><\/path><\/svg>","selectors":[{"selector":"copycode","style":"button","button_text":"Copy","button_title":"Copy to Clipboard","button_copy_text":"Copied","button_position":"inside","copy_format":"","conditions":""},{"selector":"pre","style":"button","button_text":"Copy","button_title":"Copy","button_copy_text":"Copied","button_position":"outside","copy_format":"","conditions":""}],"selector":"pre","settings":{"selector":"pre","button-text":"Copy to Clipboard","button-title":"Copy to Clipboard","button-copy-text":"Copied!","button-position":"inside","copy-format":"default"},"string":{"title":"Copy to Clipboard","copy":"Copy to Clipboard","copied":"Copied!"},"image-url":"https:\/\/www.blog.serverwala.com\/wp-content\/plugins\/copy-the-code\/\/assets\/images\/copy-1.svg","redirect_url":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/assets/js/copy-the-code.js?ver=4.0.0" id="copy-the-code-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/assets/js/clipboard.js?ver=4.0.0" id="ctc-clipboard-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/copy-the-code/assets/js/copy-inline.js?ver=4.0.0" id="ctc-copy-inline-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.9.8" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.blog.serverwala.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.9.8" id="contact-form-7-js"></script>
+<script type="text/javascript" id="tie-scripts-js-extra">
+/* <![CDATA[ */
+var tie = {"is_rtl":"","ajaxurl":"https:\/\/www.blog.serverwala.com\/wp-admin\/admin-ajax.php","is_taqyeem_active":"","is_sticky_video":"1","mobile_menu_top":"","mobile_menu_active":"area_1","mobile_menu_parent":"","lightbox_all":"true","lightbox_gallery":"true","lightbox_skin":"dark","lightbox_thumb":"horizontal","lightbox_arrows":"true","is_singular":"1","autoload_posts":"","reading_indicator":"true","lazyload":"","select_share":"true","select_share_twitter":"","select_share_facebook":"","select_share_linkedin":"","select_share_email":"","facebook_app_id":"5303202981","twitter_username":"","responsive_tables":"true","ad_blocker_detector":"","sticky_behavior":"default","sticky_desktop":"true","sticky_mobile":"true","sticky_mobile_behavior":"default","ajax_loader":"<div class=\"loader-overlay\"><div class=\"spinner-circle\"><\/div><\/div>","type_to_search":"","lang_no_results":"Nothing Found","sticky_share_mobile":"true","sticky_share_post":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/themes/jannah/assets/js/scripts.min.js?ver=6.3.0" id="tie-scripts-js"></script>
+<script type="text/javascript" id="tie-scripts-js-after">
+/* <![CDATA[ */
+				jQuery.ajax({
+					type : "GET",
+					url  : "https://www.blog.serverwala.com/wp-admin/admin-ajax.php",
+					data : "postviews_id=1544&action=tie_postviews",
+					cache: !1,
+					success: function( data ){
+						jQuery(".single-post-meta").find(".meta-views").html( data );
+					}
+				});
+
+			
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/themes/jannah/assets/ilightbox/lightbox.js?ver=6.3.0" id="tie-js-ilightbox-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/themes/jannah/assets/js/desktop.min.js?ver=6.3.0" id="tie-js-desktop-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/themes/jannah/assets/js/live-search.js?ver=6.3.0" id="tie-js-livesearch-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/themes/jannah/assets/js/single.min.js?ver=6.3.0" id="tie-js-single-js"></script>
+<script type="text/javascript" src="https://www.blog.serverwala.com/wp-content/plugins/luckywp-table-of-contents/front/assets/main.min.js?ver=2.1.4" id="lwptoc-main-js"></script>
+<script>
+				WebFontConfig ={
+					google:{
+						families: [ 'Poppins:600,regular:latin&display=swap' ]
+					}
+				};
+
+				(function(){
+					var wf   = document.createElement('script');
+					wf.src   = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+					wf.type  = 'text/javascript';
+					wf.defer = 'true';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(wf, s);
+				})();
+			</script>
+</body>
+</html>

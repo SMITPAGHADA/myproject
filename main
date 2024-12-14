@@ -1,0 +1,14 @@
+1 fristName     lastName        age     city       ID
+2 
+3 Thomas        Shelby          30      Rio        400
+4 Omega         Night           45      Ontario    600
+5 Wood          Tinker          54      Lisbon     N/A
+6 Giorgos       Georgiou        35      London     300
+7 Timmy         Turner          32      Berlin     N/A
+total 20
+4 -rw-rw-r-- 1 dipen dipen  158 Dec 11 15:40 abc.zip
+4 drwxrwxr-x 2 dipen dipen 4096 Dec 11 15:09 new
+0 -rw-rw-r-- 1 dipen dipen    0 Dec 11 17:27 new22.txt
+4 -rw-rw-r-- 1 dipen dipen  332 Dec 11 17:06 newer1.txt
+4 -rw-rw-r-- 1 dipen dipen  189 Dec 11 15:13 newer1.txt.bz2
+4 drwxrwxr-x 2 dipen dipen 4096 Dec 11 17:27 new.txt
